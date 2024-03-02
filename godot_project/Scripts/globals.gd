@@ -5,55 +5,64 @@ extends Node
 		"dialogue_path": "res://dialogue/influencer_test.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "",
+		"sprite_path": "res://assets/Sprites/ghosts/pink_ghost.png",
+		"sprite_node": Node,
 	},
 	"ghost2": {
 		"dialogue_path": "res://dialogue/test.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "",
+		"sprite_path": "res://assets/Sprites/ghosts/star_ghost.png",
+		"sprite_node": Node,
 	},
 	"ghost3": {
 		"dialogue_path": "res://dialogue/test.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "",
+		"sprite_path": "res://assets/Sprites/ghosts/green_ghost.png",
+		"sprite_node": Node,
 	},
 	"ghost4": {
 		"dialogue_path": "res://dialogue/test.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "",
+		"sprite_path": "res://assets/Sprites/ghosts/pokey_ghost.png",
+		"sprite_node": Node,
 	},
 	"ghost5": {
 		"dialogue_path": "res://dialogue/test.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "",
+		"sprite_path": "res://assets/Sprites/ghosts/star_ghost.png",
+		"sprite_node": Node,
 	},
 	"ghost6": {
 		"dialogue_path": "res://dialogue/test.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "",
+		"sprite_path": "res://assets/Sprites/ghosts/star_ghost.png",
+		"sprite_node": Node,
 	},
 	"ghost7": {
 		"dialogue_path": "res://dialogue/test.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "",
+		"sprite_path": "res://assets/Sprites/ghosts/star_ghost.png",
+		"sprite_node": Node,
 	},
 	"ghost8": {
 		"dialogue_path": "res://dialogue/test.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "",
+		"sprite_path": "res://assets/Sprites/ghosts/star_ghost.png",
+		"sprite_node": Node,
 	},
 	"ghost9": {
 		"dialogue_path": "res://dialogue/test.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "",
+		"sprite_path": "res://assets/Sprites/ghosts/star_ghost.png",
+		"sprite_node": Node,
 	},
 }
 
@@ -65,6 +74,7 @@ var player_interact_item = Node
 
 func _ready():
 	load_dialogues()
+	load_sprites()
 
 
 func load_dialogues():
@@ -73,8 +83,16 @@ func load_dialogues():
 		ghosts[ghost]["dialogue_resource"] = load(dialogue_path)
 
 
-func run_dialogue(resource):
-	d_resource = resource
+func run_dialogue(ghost: Dictionary):
 	player.movement = false
-	DialogueManager.show_dialogue_balloon(resource, "")
+	DialogueManager.show_dialogue_balloon(ghost["dialogue_resource"], "")
+
+
+func load_sprites(): # TODO: load the sprites into the ghosts dict
+	pass
+
+
+
+
+
 
