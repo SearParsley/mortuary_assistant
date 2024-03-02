@@ -14,7 +14,7 @@
 [ext_resource type="ArrayMesh" uid="uid://ci6rtli8rs8en" path="res://assets/objects/Cabinet Door.obj" id="11_5bp1a"]
 [ext_resource type="Texture2D" uid="uid://buwykim5hunw5" path="res://assets/Sprites/TestMetalSprite.png" id="11_pw8kl"]
 [ext_resource type="Texture2D" uid="uid://drkuf5ubj8msk" path="res://assets/Sprites/TestSprite.png" id="12_lqdek"]
-[ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="15_yqpy7"]
+[ext_resource type="PackedScene" uid="uid://bvjy14ds7ex0i" path="res://scenes/pause_menu.tscn" id="15_yqpy7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2gfo8"]
 size = Vector3(15, 2, 15)

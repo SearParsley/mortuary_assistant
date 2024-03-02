@@ -5,7 +5,7 @@ extends Node3D
 
 @onready var pause_menu = $PauseMenu
 var paused = false
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		_pauseMenu()
 func _pauseMenu():

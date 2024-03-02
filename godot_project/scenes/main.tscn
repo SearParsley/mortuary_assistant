@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_hnq6q"]
 [ext_resource type="Script" path="res://Scripts/Form.gd" id="3_khyj6"]
 [ext_resource type="Theme" uid="uid://w7if2jyg2wqc" path="res://themes/base.tres" id="3_xyvm3"]
-[ext_resource type="Texture2D" uid="uid://2f4u4kpjmoko" path="res://assets/buttons/form_paper_2x.png" id="4_iqxdm"]
+[ext_resource type="Texture2D" uid="uid://2f4u4kpjmoko" path="res://assets/form/form_paper_2x.png" id="4_iqxdm"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_432t0"]
 
