@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfotl71sker8a"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_pmg3d"]
+[ext_resource type="Script" path="res://Scripts/Ray.gd" id="2_qgrky"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sygw4"]
+height = 2.3
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_pmg3d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_sygw4")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+
+[node name="RayCast3D" type="RayCast3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, -6.55671e-08, -1, 0, 1.5, -4.37114e-08, 0, 0, 0)
+script = ExtResource("2_qgrky")
+
+[node name="Label" type="Label" parent="Head/RayCast3D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.5
+offset_top = -11.5
+offset_right = 21.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+text = "Hmm"
