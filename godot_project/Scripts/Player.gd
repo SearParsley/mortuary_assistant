@@ -35,6 +35,9 @@ func _input(event):
 				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			else:
 				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+				
+				# I think the esc. key should just exit the game tbh
+				
 				#
 				#
 				# Put code for pause menu (if were doing it)

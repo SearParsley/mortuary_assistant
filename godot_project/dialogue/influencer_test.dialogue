@@ -1,0 +1,28 @@
+~talk_to_Jimmy
+if TalkedTo.Jimmy == false
+	Jimmy:Hi! I’m Jimmy Paul, an influencer. I bet you knew that, though.
+	-Player: why would I?
+        	Jimmy: Because I went viral, of course!
+	-Player: I do!
+		Jimmy: I love meeting fans
+	do TalkedTo.Jimmy = true
+else
+	% Jimmy: Heyyy! Have you followed my page yet?
+	% Not to brag, but I have 50 followers
+	% If only I could stream this right now
+	wait(1)
+
+~MainLoopJimmy
+- Player: How did you die?
+        Jimmy: I did it for the vine, brother. It was awesome, If only I could have uploaded it…
+        =>MainLoopJimmy
+- Player: How long have you been here?
+	Jimmy: Longer than any of these suckers! [next=0.6]
+		In fact, this is practically my own Mansion!
+	=>MainLoopJimmy
+- Player: Who is your closest family?
+        Jimmy: My followers are my family!
+        =>MainLoopJimmy
+- Player: Bye!
+        Jimmy: Don’t forget to watch for uploads!
+        =>END
