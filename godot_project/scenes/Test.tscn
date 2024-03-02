@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-[gd_scene load_steps=21 format=3 uid="uid://c2doexm17v7om"]
-
-[ext_resource type="PackedScene" uid="uid://dfotl71sker8a" path="res://scenes/Test/player.tscn" id="1_34mhq"]
-[ext_resource type="Script" path="res://Scripts/World.gd" id="1_jl1xu"]
-=======
 [gd_scene load_steps=20 format=3 uid="uid://c2doexm17v7om"]
 
 [ext_resource type="PackedScene" uid="uid://dfotl71sker8a" path="res://scenes/Test/player.tscn" id="1_34mhq"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_le51x"]
->>>>>>> e8784e7788345ab652e6482064d8ce76f8f10fc5
 [ext_resource type="PackedScene" uid="uid://bvfq7ftw2pfnh" path="res://scenes/Test/Block.tscn" id="2_qdjrx"]
 [ext_resource type="PackedScene" uid="uid://b0n5ijm8svvat" path="res://scenes/Test/Desk.tscn" id="3_pq72w"]
 [ext_resource type="PackedScene" uid="uid://dtcamm7k3pu0g" path="res://scenes/Test/Wall.tscn" id="4_qaxyq"]
@@ -21,7 +14,6 @@
 [ext_resource type="ArrayMesh" uid="uid://ci6rtli8rs8en" path="res://assets/objects/Cabinet Door.obj" id="11_5bp1a"]
 [ext_resource type="Texture2D" uid="uid://buwykim5hunw5" path="res://assets/Sprites/TestMetalSprite.png" id="11_pw8kl"]
 [ext_resource type="Texture2D" uid="uid://drkuf5ubj8msk" path="res://assets/Sprites/TestSprite.png" id="12_lqdek"]
-[ext_resource type="PackedScene" uid="uid://bvjy14ds7ex0i" path="res://scenes/pause_menu.tscn" id="15_t0817"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2gfo8"]
 size = Vector3(15, 2, 15)
@@ -47,11 +39,7 @@ uv1_triplanar = true
 uv1_triplanar_sharpness = 0.0063457
 
 [node name="World" type="Node3D"]
-<<<<<<< HEAD
-script = ExtResource("1_jl1xu")
-=======
 script = ExtResource("1_le51x")
->>>>>>> e8784e7788345ab652e6482064d8ce76f8f10fc5
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -147,10 +135,5 @@ transform = Transform3D(-0.005, 0, 0, 0, -0.005, 0, 0, 0, -0.005, -0.22252, 1.95
 mesh = ExtResource("11_5bp1a")
 surface_material_override/0 = SubResource("StandardMaterial3D_eg4oj")
 
-<<<<<<< HEAD
-[node name="PauseMenu" parent="." instance=ExtResource("15_t0817")]
-visible = false
-=======
 [connection signal="hide_form" from="Player" to="." method="_on_player_hide_form"]
 [connection signal="show_form" from="Player" to="." method="_on_player_show_form"]
->>>>>>> e8784e7788345ab652e6482064d8ce76f8f10fc5
