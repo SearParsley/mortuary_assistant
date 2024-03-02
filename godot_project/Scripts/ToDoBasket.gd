@@ -1,4 +1,6 @@
 extends StaticBody3D
 
-func getNewForm():
-	pass
+signal new_form
+
+func interact_action():
+	new_form.emit()
