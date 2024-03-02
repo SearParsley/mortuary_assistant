@@ -1,15 +1,22 @@
+<<<<<<< HEAD
 [gd_scene load_steps=21 format=3 uid="uid://c2doexm17v7om"]
 
 [ext_resource type="PackedScene" uid="uid://dfotl71sker8a" path="res://scenes/Test/player.tscn" id="1_34mhq"]
 [ext_resource type="Script" path="res://Scripts/World.gd" id="1_jl1xu"]
+=======
+[gd_scene load_steps=20 format=3 uid="uid://c2doexm17v7om"]
+
+[ext_resource type="PackedScene" uid="uid://dfotl71sker8a" path="res://scenes/Test/player.tscn" id="1_34mhq"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_le51x"]
+>>>>>>> e8784e7788345ab652e6482064d8ce76f8f10fc5
 [ext_resource type="PackedScene" uid="uid://bvfq7ftw2pfnh" path="res://scenes/Test/Block.tscn" id="2_qdjrx"]
 [ext_resource type="PackedScene" uid="uid://b0n5ijm8svvat" path="res://scenes/Test/Desk.tscn" id="3_pq72w"]
 [ext_resource type="PackedScene" uid="uid://dtcamm7k3pu0g" path="res://scenes/Test/Wall.tscn" id="4_qaxyq"]
 [ext_resource type="PackedScene" uid="uid://dr0y5h0dlri23" path="res://scenes/Test/Floor.tscn" id="5_trtyj"]
 [ext_resource type="PackedScene" uid="uid://cj0lmvkuxqa3c" path="res://scenes/Test/Counter.tscn" id="6_2dxfj"]
 [ext_resource type="PackedScene" uid="uid://cdlk7jf6l8j46" path="res://scenes/Test/Cell1.tscn" id="7_0y8xj"]
-[ext_resource type="PackedScene" uid="uid://cpbqkm16ypu7m" path="res://scenes/Test/Cell2.tscn" id="8_etlrt"]
-[ext_resource type="PackedScene" uid="uid://c5wqbjay4yftt" path="res://scenes/Test/Cell3.tscn" id="9_8qmdj"]
+[ext_resource type="PackedScene" uid="uid://bf8ivy8xw7a52" path="res://scenes/Test/Cell2.tscn" id="8_etlrt"]
+[ext_resource type="PackedScene" uid="uid://cbgyqd4p3asas" path="res://scenes/Test/Cell3.tscn" id="9_8qmdj"]
 [ext_resource type="ArrayMesh" uid="uid://p35a4e0jqqb8" path="res://assets/objects/Basket.obj" id="10_oxan5"]
 [ext_resource type="ArrayMesh" uid="uid://ci6rtli8rs8en" path="res://assets/objects/Cabinet Door.obj" id="11_5bp1a"]
 [ext_resource type="Texture2D" uid="uid://buwykim5hunw5" path="res://assets/Sprites/TestMetalSprite.png" id="11_pw8kl"]
@@ -40,7 +47,11 @@ uv1_triplanar = true
 uv1_triplanar_sharpness = 0.0063457
 
 [node name="World" type="Node3D"]
+<<<<<<< HEAD
 script = ExtResource("1_jl1xu")
+=======
+script = ExtResource("1_le51x")
+>>>>>>> e8784e7788345ab652e6482064d8ce76f8f10fc5
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -67,34 +78,34 @@ spot_attenuation = 1.1487
 spot_angle = 65.17
 spot_angle_attenuation = 0.5
 
-[node name="Block3" parent="." instance=ExtResource("3_pq72w")]
+[node name="Desk" parent="." instance=ExtResource("3_pq72w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.434, 0)
 
-[node name="Block4" parent="." instance=ExtResource("4_qaxyq")]
+[node name="Wall" parent="." instance=ExtResource("4_qaxyq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.539, 7)
 
-[node name="Block5" parent="." instance=ExtResource("4_qaxyq")]
+[node name="Wall2" parent="." instance=ExtResource("4_qaxyq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.539, -7)
 
-[node name="Block6" parent="." instance=ExtResource("4_qaxyq")]
+[node name="Wall3" parent="." instance=ExtResource("4_qaxyq")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, 3.539, 0)
 
-[node name="Block7" parent="." instance=ExtResource("4_qaxyq")]
+[node name="Wall4" parent="." instance=ExtResource("4_qaxyq")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, 3.539, 0)
 
-[node name="Block8" parent="." instance=ExtResource("5_trtyj")]
+[node name="Floor" parent="." instance=ExtResource("5_trtyj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.02375, 0)
 
-[node name="Block9" parent="." instance=ExtResource("6_2dxfj")]
+[node name="Counter" parent="." instance=ExtResource("6_2dxfj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -6)
 
-[node name="Block10" parent="." instance=ExtResource("6_2dxfj")]
+[node name="Counter2" parent="." instance=ExtResource("6_2dxfj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 6)
 
-[node name="Block11" parent="." instance=ExtResource("6_2dxfj")]
+[node name="Counter3" parent="." instance=ExtResource("6_2dxfj")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6, 1.5, 0)
 
-[node name="Block12" parent="." instance=ExtResource("6_2dxfj")]
+[node name="Counter4" parent="." instance=ExtResource("6_2dxfj")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6, 1.5, 0)
 
 [node name="Cell 1" parent="." instance=ExtResource("7_0y8xj")]
@@ -136,5 +147,10 @@ transform = Transform3D(-0.005, 0, 0, 0, -0.005, 0, 0, 0, -0.005, -0.22252, 1.95
 mesh = ExtResource("11_5bp1a")
 surface_material_override/0 = SubResource("StandardMaterial3D_eg4oj")
 
+<<<<<<< HEAD
 [node name="PauseMenu" parent="." instance=ExtResource("15_t0817")]
 visible = false
+=======
+[connection signal="hide_form" from="Player" to="." method="_on_player_hide_form"]
+[connection signal="show_form" from="Player" to="." method="_on_player_show_form"]
+>>>>>>> e8784e7788345ab652e6482064d8ce76f8f10fc5

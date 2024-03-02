@@ -9,10 +9,15 @@ var look_dir : Vector2
 var camera_sens = 0.002
 var pauseBool = false
 var capMouse = false
+var interact_item = null
+
+
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 	move_and_slide()
+
+
 func _input(event):
 	if event is InputEventMouseMotion:
 		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -22,6 +27,7 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == 1:
 			print("Mouse 1")
+			if interact_item != null: interact_with_object()
 		if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
 			if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
 				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -45,10 +51,12 @@ func _input(event):
 				#
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 			_movement()
-			
+
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	
+
+
 func _movement():
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
@@ -58,3 +66,10 @@ func _movement():
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
+
+
+func interact_with_object():
+	print(interact_item.name)
+	interact_item.interact_action()
+
+

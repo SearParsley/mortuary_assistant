@@ -1,6 +1,7 @@
 extends RayCast3D
 
 @onready var prompt = $Label
+@onready var player = get_node("../..")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	add_exception(owner)
@@ -8,9 +9,12 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	prompt.text = ""
 	if is_colliding():
 		var detected = get_collider()
 		if detected.has_method("returnMessage"):
 			prompt.text = detected.returnMessage()
+			player.interact_item = detected
+		else:
+			player.interact_item = null

@@ -10,7 +10,7 @@ albedo_color = Color(0.4, 0.4, 0.4, 1)
 material = SubResource("StandardMaterial3D_pgwts")
 size = Vector3(2, 0.25, 1)
 
-[node name="Block" type="Node3D"]
+[node name="Desk" type="Node3D"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
