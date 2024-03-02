@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://sa4vhghey41u"]
+[gd_scene load_steps=6 format=3 uid="uid://sa4vhghey41u"]
 
 [ext_resource type="Texture2D" uid="uid://xprs21j7pk1f" path="res://icon.svg" id="1_6fhmx"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_hnq6q"]
+[ext_resource type="Script" path="res://scenes/Form.gd" id="3_khyj6"]
 [ext_resource type="Script" path="res://text_input.gd" id="3_qui2c"]
-[ext_resource type="Texture2D" uid="uid://tsa1wr2staqn" path="res://assets/buttons/form_paper.png" id="4_n2bi0"]
+[ext_resource type="Texture2D" uid="uid://2f4u4kpjmoko" path="res://assets/buttons/form_paper_2x.png" id="4_iqxdm"]
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00307393, 0, 0)
@@ -11,18 +12,93 @@ script = ExtResource("1_hnq6q")
 
 [node name="Floor" type="Sprite3D" parent="."]
 transform = Transform3D(5, 0, 0, 0, -2.18557e-07, 5, 0, -5, -2.18557e-07, 0, 0, 0)
+visible = false
 texture = ExtResource("1_6fhmx")
 
 [node name="Main Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 current = true
 
-[node name="LineEdit" type="LineEdit" parent="."]
-offset_right = 67.0625
-offset_bottom = 31.0
-max_length = 20
+[node name="Form" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_khyj6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Form"]
+position = Vector2(-36, 8)
+texture = ExtResource("4_iqxdm")
+
+[node name="LineEdit" type="LineEdit" parent="Form"]
+offset_left = -60.0
+offset_top = 32.0
+offset_right = 7.0625
+offset_bottom = 63.0
+max_length = 12
+expand_to_text_length = true
+context_menu_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+flat = true
 script = ExtResource("3_qui2c")
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 1.17844, -3)
-texture = ExtResource("4_n2bi0")
+[node name="LineEdit4" type="LineEdit" parent="Form"]
+offset_left = -76.0
+offset_top = 128.0
+offset_right = -8.9375
+offset_bottom = 159.0
+text = "as"
+max_length = 12
+expand_to_text_length = true
+context_menu_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+flat = true
+script = ExtResource("3_qui2c")
+
+[node name="LineEdit2" type="LineEdit" parent="Form"]
+offset_left = -44.0
+offset_top = -56.0
+offset_right = 23.0625
+offset_bottom = -25.0
+max_length = 12
+expand_to_text_length = true
+context_menu_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+flat = true
+script = ExtResource("3_qui2c")
+
+[node name="LineEdit3" type="LineEdit" parent="Form"]
+offset_left = -52.0
+offset_top = -144.0
+offset_right = 15.0625
+offset_bottom = -113.0
+max_length = 12
+expand_to_text_length = true
+context_menu_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+flat = true
+script = ExtResource("3_qui2c")
