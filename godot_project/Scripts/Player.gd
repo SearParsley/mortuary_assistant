@@ -56,6 +56,7 @@ func _input(event):
 
 
 func _ready():
+	DialogueManager.dialogue_ended.connect(on_dialogue_ended)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
@@ -75,3 +76,6 @@ func interact_with_object():
 	print(interact_item.name)
 	interact_item.interact_action()
 
+
+func on_dialogue_ended():
+	movement = true
