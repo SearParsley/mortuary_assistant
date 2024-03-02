@@ -13,8 +13,8 @@ func _process(_delta):
 	prompt.text = ""
 	if is_colliding():
 		var detected = get_collider()
-		if detected is Interactable:
-			prompt.text = detected.name
+		if detected.has_method("returnMessage"):
+			prompt.text = detected.returnMessage()
 			player.interact_item = detected
 		else:
 			player.interact_item = null
