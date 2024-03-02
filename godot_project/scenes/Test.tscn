@@ -70,12 +70,15 @@ text = "To Do"
 
 [node name="Fullstack" parent="ToDoBaskst" instance=ExtResource("16_ud6ou")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.561542, 2.09149, 0.00610816)
+visible = false
 
 [node name="Halfstack" parent="ToDoBaskst" instance=ExtResource("17_kg7vo")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.561542, 2.09149, 0.00610816)
+visible = false
 
 [node name="Lowstack" parent="ToDoBaskst" instance=ExtResource("18_6fj0m")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.561542, 2.09149, 0.00610816)
+visible = false
 
 [node name="CompleteBasket" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1745, 0, 0)
@@ -100,15 +103,15 @@ text = "Turn in
 "
 
 [node name="Fullstack" parent="CompleteBasket" instance=ExtResource("16_ud6ou")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1745, 0, 0)
+transform = Transform3D(0.635, 0, 0, 0, 0.635, 0, 0, 0, 0.635, -0.57836, 2.08318, 0)
 visible = false
 
 [node name="Halfstack" parent="CompleteBasket" instance=ExtResource("17_kg7vo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1745, 0, 0)
+transform = Transform3D(0.635, 0, 0, 0, 0.635, 0, 0, 0, 0.635, -0.57836, 2.08318, 0)
 visible = false
 
 [node name="Lowstack" parent="CompleteBasket" instance=ExtResource("18_6fj0m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1745, 0, 0)
+transform = Transform3D(0.635, 0, 0, 0, 0.635, 0, 0, 0, 0.635, -0.57836, 2.08318, 0)
 visible = false
 
 [node name="Lights" type="Node3D" parent="."]
@@ -174,7 +177,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, -6)
 
 [node name="Cell 3" parent="Building" instance=ExtResource("9_8qmdj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5, -6)
-visible = false
 
 [connection signal="hide_form" from="Player" to="." method="_on_player_hide_form"]
 [connection signal="show_form" from="Player" to="." method="_on_player_show_form"]
