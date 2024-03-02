@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c1gmmwi3b3a81"]
+[gd_scene load_steps=24 format=3 uid="uid://c1gmmwi3b3a81"]
 
 [ext_resource type="PackedScene" uid="uid://dfotl71sker8a" path="res://scenes/Test/player.tscn" id="1_34mhq"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_le51x"]
@@ -7,13 +7,16 @@
 [ext_resource type="PackedScene" uid="uid://dr0y5h0dlri23" path="res://scenes/Test/Floor.tscn" id="5_trtyj"]
 [ext_resource type="PackedScene" uid="uid://cj0lmvkuxqa3c" path="res://scenes/Test/Counter.tscn" id="6_2dxfj"]
 [ext_resource type="PackedScene" uid="uid://cdlk7jf6l8j46" path="res://scenes/Test/Cell1.tscn" id="7_0y8xj"]
-[ext_resource type="PackedScene" uid="uid://cpbqkm16ypu7m" path="res://scenes/Test/Cell2.tscn" id="8_etlrt"]
+[ext_resource type="PackedScene" uid="uid://bf8ivy8xw7a52" path="res://scenes/Test/Cell2.tscn" id="8_etlrt"]
 [ext_resource type="PackedScene" uid="uid://c5wqbjay4yftt" path="res://scenes/Test/Cell3.tscn" id="9_8qmdj"]
 [ext_resource type="ArrayMesh" uid="uid://p35a4e0jqqb8" path="res://assets/objects/Basket.obj" id="10_oxan5"]
 [ext_resource type="Texture2D" uid="uid://buwykim5hunw5" path="res://assets/Sprites/TestMetalSprite.png" id="11_pw8kl"]
 [ext_resource type="Script" path="res://Scripts/ToDoBasket.gd" id="14_1sckp"]
 [ext_resource type="Script" path="res://Scripts/CompleteBasket.gd" id="14_xgchx"]
 [ext_resource type="PackedScene" uid="uid://bvjy14ds7ex0i" path="res://scenes/pause_menu.tscn" id="15_yqpy7"]
+[ext_resource type="PackedScene" uid="uid://dksn1iaxayjjp" path="res://scenes/Test/Stacks/full_stack.tscn" id="16_ud6ou"]
+[ext_resource type="PackedScene" uid="uid://bfn3i422kt3rm" path="res://scenes/Test/Stacks/half_stack.tscn" id="17_kg7vo"]
+[ext_resource type="PackedScene" uid="uid://cw2xk6elmla3y" path="res://scenes/Test/Stacks/low_stack.tscn" id="18_6fj0m"]
 [ext_resource type="PackedScene" uid="uid://bj3ts1r2bk0at" path="res://scenes/Test/SpotLight.tscn" id="18_qytx1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_frngk"]
@@ -65,6 +68,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.577343, 2.6602, -0.410985)
 billboard = 1
 text = "To Do"
 
+[node name="Fullstack" parent="ToDoBaskst" instance=ExtResource("16_ud6ou")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.561542, 2.09149, 0.00610816)
+
+[node name="Halfstack" parent="ToDoBaskst" instance=ExtResource("17_kg7vo")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.561542, 2.09149, 0.00610816)
+
+[node name="Lowstack" parent="ToDoBaskst" instance=ExtResource("18_6fj0m")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.561542, 2.09149, 0.00610816)
+
 [node name="CompleteBasket" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1745, 0, 0)
 
@@ -86,6 +98,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.577343, 2.6602, -0.410985)
 billboard = 1
 text = "Turn in
 "
+
+[node name="Fullstack" parent="CompleteBasket" instance=ExtResource("16_ud6ou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1745, 0, 0)
+visible = false
+
+[node name="Halfstack" parent="CompleteBasket" instance=ExtResource("17_kg7vo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1745, 0, 0)
+visible = false
+
+[node name="Lowstack" parent="CompleteBasket" instance=ExtResource("18_6fj0m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1745, 0, 0)
+visible = false
 
 [node name="Lights" type="Node3D" parent="."]
 
