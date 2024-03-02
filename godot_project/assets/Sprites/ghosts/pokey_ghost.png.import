@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2f4u4kpjmoko"
-path="res://.godot/imported/form_paper_2x.png-31612b7505666f1a94ba3c9cf8569d40.ctex"
+uid="uid://cpxx5xytw4gaj"
+path="res://.godot/imported/pokey_ghost.png-93315e3d1d6a14fad8db17774c974fec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/buttons/form_paper_2x.png"
-dest_files=["res://.godot/imported/form_paper_2x.png-31612b7505666f1a94ba3c9cf8569d40.ctex"]
+source_file="res://assets/Sprites/ghosts/pokey_ghost.png"
+dest_files=["res://.godot/imported/pokey_ghost.png-93315e3d1d6a14fad8db17774c974fec.ctex"]
 
 [params]
 

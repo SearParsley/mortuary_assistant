@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dixnmnbo2lwpy"
-path="res://.godot/imported/options_button.png-6cf7bdb2e0ba50510490c8018f640ff8.ctex"
+uid="uid://2f4u4kpjmoko"
+path="res://.godot/imported/form_paper_2x.png-847022bc9f41357d730f66340f9b0a88.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/buttons/options_button.png"
-dest_files=["res://.godot/imported/options_button.png-6cf7bdb2e0ba50510490c8018f640ff8.ctex"]
+source_file="res://assets/form/form_paper_2x.png"
+dest_files=["res://.godot/imported/form_paper_2x.png-847022bc9f41357d730f66340f9b0a88.ctex"]
 
 [params]
 

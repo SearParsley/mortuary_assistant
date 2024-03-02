@@ -22,7 +22,7 @@ Globals="*res://Scripts/globals.gd"
 
 [dialogue_manager]
 
-general/balloon_path="res://temp dialogue/balloon.tscn"
+general/balloon_path="res://addons/dialogue_manager/example_balloon/example_balloon.tscn"
 
 [editor_plugins]
 

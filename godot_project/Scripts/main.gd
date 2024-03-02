@@ -5,7 +5,7 @@ extends Node3D
 
 @onready var pause_menu = $PauseMenu
 var paused = false
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		_pauseMenu()
 func _pauseMenu():
@@ -23,9 +23,9 @@ func _ready():
 
 
 func _on_player_hide_form():
-	form.hide_form()
+	form._hide_form()
 
 
 func _on_player_show_form():
-	form.show_form()
+	form._show_form()
 
