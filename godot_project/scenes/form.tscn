@@ -118,8 +118,3 @@ selecting_enabled = false
 deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 caret_blink = true
-
-[connection signal="text_changed" from="Name" to="." method="_on_name_text_changed"]
-[connection signal="text_changed" from="Cause" to="." method="_on_cause_text_changed"]
-[connection signal="text_changed" from="Time" to="." method="_on_time_text_changed"]
-[connection signal="text_changed" from="Kin" to="." method="_on_kin_text_changed"]
