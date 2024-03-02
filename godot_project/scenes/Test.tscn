@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://c2doexm17v7om"]
+[gd_scene load_steps=15 format=3 uid="uid://c2doexm17v7om"]
 
 [ext_resource type="PackedScene" uid="uid://dfotl71sker8a" path="res://scenes/Test/player.tscn" id="1_34mhq"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_le51x"]
 [ext_resource type="PackedScene" uid="uid://bvfq7ftw2pfnh" path="res://scenes/Test/Block.tscn" id="2_qdjrx"]
 [ext_resource type="PackedScene" uid="uid://b0n5ijm8svvat" path="res://scenes/Test/Desk.tscn" id="3_pq72w"]
 [ext_resource type="PackedScene" uid="uid://dtcamm7k3pu0g" path="res://scenes/Test/Wall.tscn" id="4_qaxyq"]
@@ -22,6 +23,7 @@ material = SubResource("StandardMaterial3D_oudnk")
 size = Vector3(15, 2, 15)
 
 [node name="World" type="Node3D"]
+script = ExtResource("1_le51x")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -88,3 +90,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5, -6)
 [node name="Basket" type="MeshInstance3D" parent="."]
 transform = Transform3D(-8.74228e-11, 0, -0.002, 0, 0.002, 0, 0.002, 0, -8.74228e-11, -0.303688, 2.06949, -0.415107)
 mesh = ExtResource("10_oxan5")
+
+[connection signal="hide_form" from="Player" to="." method="_on_player_hide_form"]
+[connection signal="show_form" from="Player" to="." method="_on_player_show_form"]
