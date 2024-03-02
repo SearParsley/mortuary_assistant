@@ -1,0 +1,26 @@
+~ talk_to_Hough
+
+if Globals.ghosts["hough"]["has_met"]
+	% Hough: We go GYM
+	% Hough: It’s lightweight
+	% Hough: YEEEAAAH BUDDY!!
+else
+	Hough: [#mood=normal] I'm Hough, [next=0.5, #mood=yell] HOUGH MONGUS! Check out the size of my... [next=0.3,#mood=normal]oh[next=0.6]
+	Well, why did you wake me?
+	do Globals.ghosts["hough"]["has_met"] = true
+=> main_loop_Hough
+			
+~ main_loop_Hough
+- How did you die
+	Hough: [#mood=normal] I lifted too much weight. [#mood=yell] Smashed my record! [next=0.6]
+		[#mood=sad] and my spine.
+	=> main_loop_Hough
+- What was your job?
+	Hough: [#mood=normal] I was a professional bodybuilder. [#mood=yell] I'm HOUGH MONGUS!
+	=> main_loop_Hough
+- Who is your closest Family?
+	Hough: [#mood=happy] My spotter, Arnie!
+	=> main_loop_Hough
+- Bye!
+	Hough: ...
+	=> END

@@ -2,79 +2,70 @@ extends Node
 
 @onready var ghosts = {
 	"jimmy": {
-		"dialogue_path": "res://dialogue/influencer_test.dialogue",
+		"dialogue_path": "res://dialogue/jimmy.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "res://assets/Sprites/ghosts/pink_ghost.png",
-		"sprite_node": Node,
+		"sprite_path": "../../res://assets/Sprites/ghosts/pink_ghost2x.png",
 	},
-	"ghost2": {
-		"dialogue_path": "res://dialogue/test.dialogue",
+	"hough": {
+		"dialogue_path": "res://dialogue/hough.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "res://assets/Sprites/ghosts/star_ghost.png",
-		"sprite_node": Node,
+		"sprite_path": "res://assets/Sprites/ghosts/star_ghost2x.png",
 	},
-	"ghost3": {
-		"dialogue_path": "res://dialogue/test.dialogue",
+	"perl": {
+		"dialogue_path": "res://dialogue/perl.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "res://assets/Sprites/ghosts/green_ghost.png",
-		"sprite_node": Node,
+		"sprite_path": "res://assets/Sprites/ghosts/green_ghost2x.png",
 	},
-	"ghost4": {
-		"dialogue_path": "res://dialogue/test.dialogue",
+	"beverly": {
+		"dialogue_path": "res://dialogue/beverly.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "res://assets/Sprites/ghosts/pokey_ghost.png",
-		"sprite_node": Node,
+		"sprite_path": "res://assets/Sprites/ghosts/pokey_ghost2x.png",
 	},
-	"ghost5": {
-		"dialogue_path": "res://dialogue/test.dialogue",
+	"jack": {
+		"dialogue_path": "res://dialogue/jack.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "res://assets/Sprites/ghosts/star_ghost.png",
-		"sprite_node": Node,
+		"sprite_path": "res://assets/Sprites/ghosts/star_ghost2x.png",
 	},
 	"ghost6": {
-		"dialogue_path": "res://dialogue/test.dialogue",
+		"dialogue_path": "res://dialogue/test5.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "res://assets/Sprites/ghosts/star_ghost.png",
-		"sprite_node": Node,
+		"sprite_path": "res://assets/Sprites/ghosts/star_ghost2x.png",
 	},
 	"ghost7": {
-		"dialogue_path": "res://dialogue/test.dialogue",
+		"dialogue_path": "res://dialogue/test5.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "res://assets/Sprites/ghosts/star_ghost.png",
-		"sprite_node": Node,
+		"sprite_path": "res://assets/Sprites/ghosts/star_ghost2x.png",
 	},
 	"ghost8": {
-		"dialogue_path": "res://dialogue/test.dialogue",
+		"dialogue_path": "res://dialogue/test5.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "res://assets/Sprites/ghosts/star_ghost.png",
-		"sprite_node": Node,
+		"sprite_path": "res://assets/Sprites/ghosts/star_ghost2x.png",
 	},
 	"ghost9": {
-		"dialogue_path": "res://dialogue/test.dialogue",
+		"dialogue_path": "res://dialogue/test5.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "res://assets/Sprites/ghosts/star_ghost.png",
-		"sprite_node": Node,
+		"sprite_path": "res://assets/Sprites/ghosts/star_ghost2x.png",
 	},
 }
 
 @onready var player
-@onready var d_resource
+
+signal _show_ghost
 
 var player_interact_item = Node
 
 
 func _ready():
 	load_dialogues()
-	load_sprites()
 
 
 func load_dialogues():
@@ -83,18 +74,7 @@ func load_dialogues():
 		ghosts[ghost]["dialogue_resource"] = load(dialogue_path)
 
 
-func _run_dialogue(ghost: Dictionary):
+func _run_dialogue(ghost):
 	player.movement = false
-	DialogueManager.show_dialogue_balloon(ghost["dialogue_resource"], "")
-
-
-func load_sprites(): # TODO: load the sprites into the ghosts dict
-	for ghost in ghosts.keys():
-		var sprite_path = ghosts[ghost]["sprite_path"]
-		ghosts[ghost]["sprite_node"] = get_node(sprite_path)
-
-
-
-
-
-
+	_show_ghost.emit(ghosts[ghost]["sprite_path"])
+	DialogueManager.show_dialogue_balloon(ghosts[ghost]["dialogue_resource"], "")

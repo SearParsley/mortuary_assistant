@@ -1,0 +1,23 @@
+~ talk_to_Perl
+
+if Globals.ghosts["perl"]["has_met"]
+	Perl: What can I do for you?
+else
+	[[Hi\,|Hello!]] I'm Perl.
+	do Globals.ghosts["perl"]["has_met"] = true
+=> main_loop_Perl
+
+~ main_loop_Perl
+
+- How did you die
+	Perl: [#mood=insane] I dry scooped caffeine during crunch.
+	=> main_loop_Perl
+- What was your job?
+	Perl: [#mood=happy] I was a Game Developer.
+	=> main_loop_Perl
+- Who is your closest Family?
+	Perl: [#mood=happy] My daughter, Py!
+	=> main_loop_Perl
+- Bye!
+	Perl: Alright, back to hacking this matrix, [#mood=fear] I mean...
+	=> END

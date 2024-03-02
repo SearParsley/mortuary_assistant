@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dyhn1k4vip7ma"
+path="res://.godot/imported/beverly.dialogue-611c6d11df4e0fe1767db8f59ddf0c41.tres"
+
+[deps]
+
+source_file="res://dialogue/beverly.dialogue"
+dest_files=["res://.godot/imported/beverly.dialogue-611c6d11df4e0fe1767db8f59ddf0c41.tres"]
+
+[params]
+
+defaults=true

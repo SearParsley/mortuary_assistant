@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cpbqkm16ypu7m"]
+[gd_scene load_steps=16 format=3 uid="uid://bf8ivy8xw7a52"]
 
 [ext_resource type="Script" path="res://Scripts/Blocks/Block 5.gd" id="1_ulitf"]
 [ext_resource type="Texture2D" uid="uid://buwykim5hunw5" path="res://assets/Sprites/TestMetalSprite.png" id="2_1icso"]

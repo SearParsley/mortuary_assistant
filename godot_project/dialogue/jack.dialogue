@@ -1,0 +1,24 @@
+~ talk_to_Jack
+
+if Globals.ghosts["jack"]["has_met"]
+	% Jack: [#mood=normal] Is your car running?
+	% Jack: [#mood=mad] Business hours are 8-6
+	% Jack: [#mood=happy] [[Hi|Hey|Hello]], what do you need?
+else
+	Jack: Nice to meet you, I'm Jack Wrench!
+	do Globals.ghosts["jack"]["has_met"]=true		
+=> main_loop_Jack
+~ main_loop_Jack
+
+- How did you die
+	Jack: [#mood=sad] I was crushed by a car on the job.
+	=> main_loop_Jack
+- What was your job?
+	Jack: [#mood=happy] I was an auto mechanic!
+	=> main_loop_Jack
+- Who is your closest Family?
+	Jack: [#mood=happy] Easy! My brother, Bill.
+	=> main_loop_Jack
+- Bye!
+	Jack: [#mood=work] Get your car repaired at Wrench Brothers' auto!
+	=> END

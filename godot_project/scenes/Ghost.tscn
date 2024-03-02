@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsmsgyu27u52e"]
+
+[ext_resource type="Script" path="res://Scripts/Ghost.gd" id="1_g856x"]
+[ext_resource type="Texture2D" uid="uid://dol5kyxdr4sp3" path="res://assets/Sprites/ghosts/green_ghost2x.png" id="1_jx4x3"]
+
+[node name="Ghost" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -44.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g856x")
+
+[node name="Ghost_Sprite" type="Sprite2D" parent="." groups=["Ghost"]]
+texture = ExtResource("1_jx4x3")

@@ -1,7 +1,7 @@
 extends Node3D
 
 @onready var form = preload("res://scenes/form.tscn").instantiate()
-
+@onready var ghost = preload("res://scenes/Ghost.tscn").instantiate()
 
 @onready var pause_menu = $PauseMenu
 var paused = false
@@ -20,6 +20,8 @@ func _pauseMenu():
 
 func _ready():
 	add_child(form)
+	add_child(ghost)
+	ghost.hide()
 
 
 func _on_player_hide_form():

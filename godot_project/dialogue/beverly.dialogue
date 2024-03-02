@@ -1,0 +1,24 @@
+~ talk_to_Beverly
+
+if Globals.ghosts["beverly"]["has_met"]
+	% Beverly: Did you come to chat about animals?
+	% Beverly: What's up?
+else
+	Beverly: [[Hi\,|Heyy!|Hello!|What's up?]] I'm Beverly Buck!
+	do Globals.ghosts["beverly"]["has_met"] = true
+=> main_loop_Beverly
+
+~ main_loop_Beverly
+
+- How did you die
+	Beverly: [#mood=mad] I should have never trusted that tiger!
+	=> main_loop_Beverly
+- What was your job?
+	Beverly: [#mood=happy] I ran the zoo!
+	=> main_loop_Beverly
+- Who is your closest Family?
+	Beverly: [#mood=happy] That's my Sister, Pam!
+	=> main_loop_Beverly
+- Bye!
+	Beverly: Beware the big kitties!
+	=> END

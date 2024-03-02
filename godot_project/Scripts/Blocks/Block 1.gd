@@ -4,5 +4,4 @@ func returnMessage():
 
 
 func interact_action():
-	var ghost = Globals.ghosts["jimmy"]
-	Globals._run_dialogue(ghost)
+	Globals._run_dialogue("jimmy")

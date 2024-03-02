@@ -4,4 +4,4 @@ func returnMessage():
 
 
 func interact_action():
-	pass
+	Globals._run_dialogue("hough")

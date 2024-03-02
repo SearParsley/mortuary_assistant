@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://blceojv5cffj2"
+path="res://.godot/imported/perl.dialogue-a9f3646ff482e16a6c6c45ac93212e21.tres"
+
+[deps]
+
+source_file="res://dialogue/perl.dialogue"
+dest_files=["res://.godot/imported/perl.dialogue-a9f3646ff482e16a6c6c45ac93212e21.tres"]
+
+[params]
+
+defaults=true
