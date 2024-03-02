@@ -40,7 +40,7 @@ script = ExtResource("2_sxd4s")
 position = Vector2(20, 8)
 texture = ExtResource("3_tnw3c")
 
-[node name="Name" type="LineEdit" parent="." groups=["Form"]]
+[node name="Name" type="LineEdit" parent="." groups=["Form", "Form_Text"]]
 layout_mode = 0
 offset_left = 4.0
 offset_top = -144.0
@@ -60,7 +60,7 @@ deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 caret_blink = true
 
-[node name="Cause" type="LineEdit" parent="." groups=["Form"]]
+[node name="Cause" type="LineEdit" parent="." groups=["Form", "Form_Text"]]
 layout_mode = 0
 offset_left = 12.0
 offset_top = -56.0
@@ -80,7 +80,7 @@ deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 caret_blink = true
 
-[node name="Time" type="LineEdit" parent="." groups=["Form"]]
+[node name="Time" type="LineEdit" parent="." groups=["Form", "Form_Text"]]
 layout_mode = 0
 offset_left = -4.0
 offset_top = 32.0
@@ -99,7 +99,7 @@ selecting_enabled = false
 deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 
-[node name="Kin" type="LineEdit" parent="." groups=["Form"]]
+[node name="Kin" type="LineEdit" parent="." groups=["Form", "Form_Text"]]
 layout_mode = 0
 offset_left = -20.0
 offset_top = 128.0
