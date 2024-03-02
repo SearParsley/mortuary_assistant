@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://c2doexm17v7om"]
+
+[ext_resource type="PackedScene" uid="uid://dfotl71sker8a" path="res://player.tscn" id="1_34mhq"]
+[ext_resource type="PackedScene" uid="uid://bvfq7ftw2pfnh" path="res://Block.tscn" id="2_qdjrx"]
+[ext_resource type="PackedScene" uid="uid://b0n5ijm8svvat" path="res://Desk.tscn" id="3_pq72w"]
+[ext_resource type="PackedScene" uid="uid://dtcamm7k3pu0g" path="res://Wall.tscn" id="4_qaxyq"]
+[ext_resource type="PackedScene" uid="uid://dr0y5h0dlri23" path="res://Floor.tscn" id="5_trtyj"]
+[ext_resource type="PackedScene" uid="uid://cj0lmvkuxqa3c" path="res://Counter.tscn" id="6_2dxfj"]
+[ext_resource type="PackedScene" uid="uid://cdlk7jf6l8j46" path="res://Cell1.tscn" id="7_0y8xj"]
+[ext_resource type="PackedScene" uid="uid://bf8ivy8xw7a52" path="res://Cell2.tscn" id="8_etlrt"]
+[ext_resource type="PackedScene" uid="uid://cbgyqd4p3asas" path="res://Cell3.tscn" id="9_8qmdj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2gfo8"]
+size = Vector3(15, 2, 15)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oudnk"]
+albedo_color = Color(0.0941176, 0.172549, 0.172549, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_iu2d0"]
+material = SubResource("StandardMaterial3D_oudnk")
+size = Vector3(15, 2, 15)
+
+[node name="World" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_2gfo8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_iu2d0")
+
+[node name="Player" parent="." instance=ExtResource("1_34mhq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.19003, 1.66812)
+
+[node name="Block" parent="." instance=ExtResource("2_qdjrx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -2.74941)
+
+[node name="Block2" parent="." instance=ExtResource("2_qdjrx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.90669, 2, 2.1036)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.00424114, 0.999991, 0, -0.999991, -0.00424114, 0, 6.47433, 0)
+light_energy = 5.495
+spot_range = 21.8756
+spot_angle = 49.0706
+
+[node name="Block3" parent="." instance=ExtResource("3_pq72w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.434, 0)
+
+[node name="Block4" parent="." instance=ExtResource("4_qaxyq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.539, 7)
+
+[node name="Block5" parent="." instance=ExtResource("4_qaxyq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.539, -7)
+
+[node name="Block6" parent="." instance=ExtResource("4_qaxyq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, 3.539, 0)
+
+[node name="Block7" parent="." instance=ExtResource("4_qaxyq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, 3.539, 0)
+
+[node name="Block8" parent="." instance=ExtResource("5_trtyj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.02375, 0)
+
+[node name="Block9" parent="." instance=ExtResource("6_2dxfj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -6)
+
+[node name="Block10" parent="." instance=ExtResource("6_2dxfj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 6)
+
+[node name="Block11" parent="." instance=ExtResource("6_2dxfj")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6, 1.5, 0)
+
+[node name="Block12" parent="." instance=ExtResource("6_2dxfj")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6, 1.5, 0)
+
+[node name="Cell 1" parent="." instance=ExtResource("7_0y8xj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -6)
+
+[node name="Cell 2" parent="." instance=ExtResource("8_etlrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, -6)
+
+[node name="Cell 3" parent="." instance=ExtResource("9_8qmdj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5, -6)
