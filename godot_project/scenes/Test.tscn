@@ -88,7 +88,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, -6)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5, -6)
 
 [node name="Basket" type="MeshInstance3D" parent="."]
-transform = Transform3D(-8.74228e-11, 0, -0.002, 0, 0.002, 0, 0.002, 0, -8.74228e-11, -0.303688, 2.06949, -0.415107)
+transform = Transform3D(-8.74228e-11, 0, -0.002, 0, 0.002, 0, 0.002, 0, -8.74228e-11, -0.41605, 2.06032, -0.462072)
 mesh = ExtResource("10_oxan5")
 
 [connection signal="hide_form" from="Player" to="." method="_on_player_hide_form"]
