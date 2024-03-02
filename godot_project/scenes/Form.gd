@@ -9,7 +9,7 @@ extends Control
 	}
 
 func _ready():
-	#sprite.visible = false
+	hide_form()
 	pass
 
 
