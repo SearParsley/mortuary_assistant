@@ -9,7 +9,7 @@ var look_dir : Vector2
 var camera_sens = 0.002
 var pauseBool = false
 var capMouse = false
-var movement = false
+var movement = true
 var interact_item = null
 
 
