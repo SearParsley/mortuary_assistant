@@ -30,8 +30,9 @@ func _submit_form():
 
 
 func _new_form():
+	print("new_form")
 	for node in form_text_nodes:
 		node.text = ""
-		in_hand = true
 	_hide_form()
+	in_hand = true
 
