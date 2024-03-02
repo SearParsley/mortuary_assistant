@@ -1,9 +1,12 @@
 extends CharacterBody3D
+signal show_form
+signal hide_form
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var look_dir : Vector2
 @onready var ray = $Head/RayCast3D
+@onready var form = get_node("../Form")
 var camera_sens = 0.002
 var pauseBool = false
 var capMouse = false
@@ -23,13 +26,10 @@ func _input(event):
 		if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
 			if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
 				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+				hide_form.emit()
 			else:
 				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-				#
-				#
-				# Put code for typing on forum here
-				#
-				#
+				show_form.emit()
 	if event is InputEventKey:
 		if Input.is_action_pressed("ui_cancel"):
 			if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
