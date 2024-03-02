@@ -1,14 +1,15 @@
-[gd_scene load_steps=19 format=3 uid="uid://c2doexm17v7om"]
+[gd_scene load_steps=20 format=3 uid="uid://c2doexm17v7om"]
 
 [ext_resource type="PackedScene" uid="uid://dfotl71sker8a" path="res://scenes/Test/player.tscn" id="1_34mhq"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_le51x"]
 [ext_resource type="PackedScene" uid="uid://bvfq7ftw2pfnh" path="res://scenes/Test/Block.tscn" id="2_qdjrx"]
 [ext_resource type="PackedScene" uid="uid://b0n5ijm8svvat" path="res://scenes/Test/Desk.tscn" id="3_pq72w"]
 [ext_resource type="PackedScene" uid="uid://dtcamm7k3pu0g" path="res://scenes/Test/Wall.tscn" id="4_qaxyq"]
 [ext_resource type="PackedScene" uid="uid://dr0y5h0dlri23" path="res://scenes/Test/Floor.tscn" id="5_trtyj"]
 [ext_resource type="PackedScene" uid="uid://cj0lmvkuxqa3c" path="res://scenes/Test/Counter.tscn" id="6_2dxfj"]
 [ext_resource type="PackedScene" uid="uid://cdlk7jf6l8j46" path="res://scenes/Test/Cell1.tscn" id="7_0y8xj"]
-[ext_resource type="PackedScene" uid="uid://cpbqkm16ypu7m" path="res://scenes/Test/Cell2.tscn" id="8_etlrt"]
-[ext_resource type="PackedScene" uid="uid://c5wqbjay4yftt" path="res://scenes/Test/Cell3.tscn" id="9_8qmdj"]
+[ext_resource type="PackedScene" uid="uid://bf8ivy8xw7a52" path="res://scenes/Test/Cell2.tscn" id="8_etlrt"]
+[ext_resource type="PackedScene" uid="uid://cbgyqd4p3asas" path="res://scenes/Test/Cell3.tscn" id="9_8qmdj"]
 [ext_resource type="ArrayMesh" uid="uid://p35a4e0jqqb8" path="res://assets/objects/Basket.obj" id="10_oxan5"]
 [ext_resource type="ArrayMesh" uid="uid://ci6rtli8rs8en" path="res://assets/objects/Cabinet Door.obj" id="11_5bp1a"]
 [ext_resource type="Texture2D" uid="uid://buwykim5hunw5" path="res://assets/Sprites/TestMetalSprite.png" id="11_pw8kl"]
@@ -38,6 +39,7 @@ uv1_triplanar = true
 uv1_triplanar_sharpness = 0.0063457
 
 [node name="World" type="Node3D"]
+script = ExtResource("1_le51x")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -132,3 +134,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_eg4oj")
 transform = Transform3D(-0.005, 0, 0, 0, -0.005, 0, 0, 0, -0.005, -0.22252, 1.95044, 5.49141)
 mesh = ExtResource("11_5bp1a")
 surface_material_override/0 = SubResource("StandardMaterial3D_eg4oj")
+
+[connection signal="hide_form" from="Player" to="." method="_on_player_hide_form"]
+[connection signal="show_form" from="Player" to="." method="_on_player_show_form"]
