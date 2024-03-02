@@ -1,5 +1,6 @@
 extends Control
 
+
 @onready var form_nodes = get_tree().get_nodes_in_group("Form")
 @onready var text_dict = {
 	"name": "",
@@ -8,6 +9,7 @@ extends Control
 	"kin": ""
 	}
 var is_hidden = true
+
 
 func _ready():
 	hide_form()
@@ -30,13 +32,11 @@ func _on_kin_text_changed(new_text):
 	text_dict.kin = new_text
 
 
-func _on_submit_form_pressed():
-	hide_form()
-
 func hide_form():
 	for node in form_nodes:
 		node.hide()
 	is_hidden = true
+
 
 func show_form():
 	for node in form_nodes:

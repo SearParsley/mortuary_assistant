@@ -36,11 +36,7 @@ func _input(event):
 				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			else:
 				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-				#
-				#
-				# Put code for pause menu (if were doing it)
-				#
-				#
+				show_form.emit()
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 			_movement()
 			
