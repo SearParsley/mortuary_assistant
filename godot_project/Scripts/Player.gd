@@ -6,7 +6,6 @@ const JUMP_VELOCITY = 4.5
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var look_dir : Vector2
 @onready var ray = $Head/RayCast3D
-@onready var form = get_node("../Form")
 var camera_sens = 0.002
 var pauseBool = false
 var capMouse = false
