@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfrbwya3u1xqh"
-path="res://.godot/imported/coco_small.png-248ec6d62058aad2902106889bfd62f3.ctex"
+path="res://.godot/imported/coco_small.png-480f4cc085ec249432ea03e7cd5f1ec5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://examples/portraits_balloon/portraits/coco_small.png"
-dest_files=["res://.godot/imported/coco_small.png-248ec6d62058aad2902106889bfd62f3.ctex"]
+source_file="res://addons/dialogue_manager/portraits_balloon/portraits/coco_small.png"
+dest_files=["res://.godot/imported/coco_small.png-480f4cc085ec249432ea03e7cd5f1ec5.ctex"]
 
 [params]
 

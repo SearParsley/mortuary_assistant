@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cng7ex3hvatxl"
-path="res://.godot/imported/talk.wav-f77088b408ad884b029728413a246ca2.sample"
+path="res://.godot/imported/talk.wav-50c3f61843b422fa57454b6bfde0628f.sample"
 
 [deps]
 
-source_file="res://examples/portraits_balloon/talk.wav"
-dest_files=["res://.godot/imported/talk.wav-f77088b408ad884b029728413a246ca2.sample"]
+source_file="res://addons/dialogue_manager/portraits_balloon/talk.wav"
+dest_files=["res://.godot/imported/talk.wav-50c3f61843b422fa57454b6bfde0628f.sample"]
 
 [params]
 

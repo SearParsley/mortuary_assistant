@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7vjtc8h042l5"
-path="res://.godot/imported/nathan_small.png-78507967aee4c9b9a41fd8cd115e4462.ctex"
+path="res://.godot/imported/nathan_small.png-d7553583e8516dc9f64f23037a55caf9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://examples/portraits_balloon/portraits/nathan_small.png"
-dest_files=["res://.godot/imported/nathan_small.png-78507967aee4c9b9a41fd8cd115e4462.ctex"]
+source_file="res://addons/dialogue_manager/portraits_balloon/portraits/nathan_small.png"
+dest_files=["res://.godot/imported/nathan_small.png-d7553583e8516dc9f64f23037a55caf9.ctex"]
 
 [params]
 
