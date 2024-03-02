@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=3 uid="uid://dksn1iaxayjjp"]
+
+[ext_resource type="PackedScene" uid="uid://bvfq7ftw2pfnh" path="res://scenes/Test/Block.tscn" id="1_gmw70"]
+
+[node name="Full stack" type="Node3D"]
+
+[node name="Block" parent="." instance=ExtResource("1_gmw70")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Block2" parent="." instance=ExtResource("1_gmw70")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.0184429, 0)
+
+[node name="Block3" parent="." instance=ExtResource("1_gmw70")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.0356494, 0)
+
+[node name="Block5" parent="." instance=ExtResource("1_gmw70")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.0675913, 0)
+
+[node name="Block6" parent="." instance=ExtResource("1_gmw70")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.0860342, 0)
+
+[node name="Block7" parent="." instance=ExtResource("1_gmw70")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.103241, 0)
+
+[node name="Block8" parent="." instance=ExtResource("1_gmw70")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.117013, 0)
+
+[node name="Block9" parent="." instance=ExtResource("1_gmw70")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.135455, 0)
+
+[node name="Block10" parent="." instance=ExtResource("1_gmw70")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.152662, 0)
+
+[node name="Block4" parent="." instance=ExtResource("1_gmw70")]
+transform = Transform3D(0.617132, 0, -0.201078, 0, -0.015, 0, 0.126679, 0, 0.979575, 0, 0.0572621, 0)
+
+[node name="Block11" parent="." instance=ExtResource("1_gmw70")]
+transform = Transform3D(0.617132, 0, 0.201078, 0, -0.015, 0, -0.126679, 0, 0.979575, 0, 0.165248, 0)
+
+[node name="Block12" parent="." instance=ExtResource("1_gmw70")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.182207, 0)
+
+[node name="Block13" parent="." instance=ExtResource("1_gmw70")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.20065, 0)
+
+[node name="Block14" parent="." instance=ExtResource("1_gmw70")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.217857, 0)
+
+[node name="Block15" parent="." instance=ExtResource("1_gmw70")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.249799, 0)
+
+[node name="Block16" parent="." instance=ExtResource("1_gmw70")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.268242, 0)
+
+[node name="Block17" parent="." instance=ExtResource("1_gmw70")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.285448, 0)
+
+[node name="Block18" parent="." instance=ExtResource("1_gmw70")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.29922, 0)
+
+[node name="Block19" parent="." instance=ExtResource("1_gmw70")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.317663, 0)
+
+[node name="Block20" parent="." instance=ExtResource("1_gmw70")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.334869, 0)
+
+[node name="Block21" parent="." instance=ExtResource("1_gmw70")]
+transform = Transform3D(0.617132, 0, -0.201078, 0, -0.015, 0, 0.126679, 0, 0.979575, 0, 0.239469, 0)
+
+[node name="Block22" parent="." instance=ExtResource("1_gmw70")]
+transform = Transform3D(0.617132, 0, 0.201078, 0, -0.015, 0, -0.126679, 0, 0.979575, 0, 0.347456, 0)

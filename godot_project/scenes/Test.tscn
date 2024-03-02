@@ -1,20 +1,30 @@
-[gd_scene load_steps=21 format=3 uid="uid://c2doexm17v7om"]
+[gd_scene load_steps=21 format=3 uid="uid://c1gmmwi3b3a81"]
 
 [ext_resource type="PackedScene" uid="uid://dfotl71sker8a" path="res://scenes/Test/player.tscn" id="1_34mhq"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_le51x"]
-[ext_resource type="PackedScene" uid="uid://bvfq7ftw2pfnh" path="res://scenes/Test/Block.tscn" id="2_qdjrx"]
 [ext_resource type="PackedScene" uid="uid://b0n5ijm8svvat" path="res://scenes/Test/Desk.tscn" id="3_pq72w"]
 [ext_resource type="PackedScene" uid="uid://dtcamm7k3pu0g" path="res://scenes/Test/Wall.tscn" id="4_qaxyq"]
 [ext_resource type="PackedScene" uid="uid://dr0y5h0dlri23" path="res://scenes/Test/Floor.tscn" id="5_trtyj"]
 [ext_resource type="PackedScene" uid="uid://cj0lmvkuxqa3c" path="res://scenes/Test/Counter.tscn" id="6_2dxfj"]
 [ext_resource type="PackedScene" uid="uid://cdlk7jf6l8j46" path="res://scenes/Test/Cell1.tscn" id="7_0y8xj"]
-[ext_resource type="PackedScene" uid="uid://bf8ivy8xw7a52" path="res://scenes/Test/Cell2.tscn" id="8_etlrt"]
-[ext_resource type="PackedScene" uid="uid://cbgyqd4p3asas" path="res://scenes/Test/Cell3.tscn" id="9_8qmdj"]
+[ext_resource type="PackedScene" uid="uid://cpbqkm16ypu7m" path="res://scenes/Test/Cell2.tscn" id="8_etlrt"]
+[ext_resource type="PackedScene" uid="uid://c5wqbjay4yftt" path="res://scenes/Test/Cell3.tscn" id="9_8qmdj"]
 [ext_resource type="ArrayMesh" uid="uid://p35a4e0jqqb8" path="res://assets/objects/Basket.obj" id="10_oxan5"]
-[ext_resource type="ArrayMesh" uid="uid://ci6rtli8rs8en" path="res://assets/objects/Cabinet Door.obj" id="11_5bp1a"]
 [ext_resource type="Texture2D" uid="uid://buwykim5hunw5" path="res://assets/Sprites/TestMetalSprite.png" id="11_pw8kl"]
-[ext_resource type="Texture2D" uid="uid://drkuf5ubj8msk" path="res://assets/Sprites/TestSprite.png" id="12_lqdek"]
+[ext_resource type="Script" path="res://Scripts/ToDoBasket.gd" id="14_1sckp"]
+[ext_resource type="Script" path="res://Scripts/CompleteBasket.gd" id="14_xgchx"]
 [ext_resource type="PackedScene" uid="uid://bvjy14ds7ex0i" path="res://scenes/pause_menu.tscn" id="15_yqpy7"]
+[ext_resource type="PackedScene" uid="uid://bj3ts1r2bk0at" path="res://scenes/Test/SpotLight.tscn" id="18_qytx1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_frngk"]
+size = Vector3(0.533325, 0.134766, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j8a2g"]
+albedo_texture = ExtResource("11_pw8kl")
+uv1_scale = Vector3(-0.01, -0.01, -0.01)
+uv1_offset = Vector3(-2.565, -1.31, 5.135)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 0.590643
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2gfo8"]
 size = Vector3(15, 2, 15)
@@ -26,117 +36,120 @@ albedo_color = Color(0.0941176, 0.172549, 0.172549, 1)
 material = SubResource("StandardMaterial3D_oudnk")
 size = Vector3(15, 2, 15)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j8a2g"]
-albedo_texture = ExtResource("11_pw8kl")
-uv1_scale = Vector3(-0.01, -0.01, -0.01)
-uv1_offset = Vector3(-2.565, -1.31, 5.135)
-uv1_triplanar = true
-uv1_triplanar_sharpness = 0.590643
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eg4oj"]
-albedo_texture = ExtResource("12_lqdek")
-uv1_scale = Vector3(0.135, 0.135, 0.135)
-uv1_triplanar = true
-uv1_triplanar_sharpness = 0.0063457
-
 [node name="World" type="Node3D"]
 script = ExtResource("1_le51x")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("BoxShape3D_2gfo8")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-mesh = SubResource("BoxMesh_iu2d0")
 
 [node name="Player" parent="." instance=ExtResource("1_34mhq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.19003, 1.66812)
 
-[node name="Block" parent="." instance=ExtResource("2_qdjrx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -2.74941)
+[node name="PauseMenu" parent="." instance=ExtResource("15_yqpy7")]
+visible = false
 
-[node name="Block2" parent="." instance=ExtResource("2_qdjrx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.90669, 2, 2.1036)
+[node name="ToDoBaskst" type="Node3D" parent="."]
 
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.00424114, 0.999991, 0, -0.999991, -0.00424114, 0, 5.684, 0)
-light_energy = 5.495
-spot_range = 21.8756
-spot_attenuation = 1.1487
-spot_angle = 65.17
-spot_angle_attenuation = 0.5
+[node name="StaticBody3D" type="StaticBody3D" parent="ToDoBaskst"]
+script = ExtResource("14_1sckp")
 
-[node name="Desk" parent="." instance=ExtResource("3_pq72w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.434, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ToDoBaskst/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.577369, 2.18456, 0)
+shape = SubResource("BoxShape3D_frngk")
 
-[node name="Wall" parent="." instance=ExtResource("4_qaxyq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.539, 7)
-
-[node name="Wall2" parent="." instance=ExtResource("4_qaxyq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.539, -7)
-
-[node name="Wall3" parent="." instance=ExtResource("4_qaxyq")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7, 3.539, 0)
-
-[node name="Wall4" parent="." instance=ExtResource("4_qaxyq")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, 3.539, 0)
-
-[node name="Floor" parent="." instance=ExtResource("5_trtyj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.02375, 0)
-
-[node name="Counter" parent="." instance=ExtResource("6_2dxfj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -6)
-
-[node name="Counter2" parent="." instance=ExtResource("6_2dxfj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 6)
-
-[node name="Counter3" parent="." instance=ExtResource("6_2dxfj")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6, 1.5, 0)
-
-[node name="Counter4" parent="." instance=ExtResource("6_2dxfj")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6, 1.5, 0)
-
-[node name="Cell 1" parent="." instance=ExtResource("7_0y8xj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -6)
-
-[node name="Cell 2" parent="." instance=ExtResource("8_etlrt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, -6)
-
-[node name="Cell 3" parent="." instance=ExtResource("9_8qmdj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5, -6)
-
-[node name="Basket" type="MeshInstance3D" parent="."]
+[node name="Basket" type="MeshInstance3D" parent="ToDoBaskst/StaticBody3D"]
 transform = Transform3D(-8.74228e-11, 0, -0.002, 0, 0.002, 0, 0.002, 0, -8.74228e-11, -0.303688, 2.06949, -0.415107)
 mesh = ExtResource("10_oxan5")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_j8a2g")
 
-[node name="CabinetDoor" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.005, 0, 0, 0, -0.005, 0, 0, 0, -0.005, 4.3237, 1.95044, 5.49141)
-mesh = ExtResource("11_5bp1a")
-surface_material_override/0 = SubResource("StandardMaterial3D_eg4oj")
+[node name="Label3D" type="Label3D" parent="ToDoBaskst/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.577343, 2.6602, -0.410985)
+billboard = 1
+text = "To Do"
 
-[node name="CabinetDoor2" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.005, 0, 0, 0, -0.005, 0, 0, 0, -0.005, 3.237, 1.95044, 5.49141)
-mesh = ExtResource("11_5bp1a")
-surface_material_override/0 = SubResource("StandardMaterial3D_eg4oj")
+[node name="CompleteBasket" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1745, 0, 0)
 
-[node name="CabinetDoor3" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.005, 0, 0, 0, -0.005, 0, 0, 0, -0.005, 1.91273, 1.95044, 5.49141)
-mesh = ExtResource("11_5bp1a")
-surface_material_override/0 = SubResource("StandardMaterial3D_eg4oj")
+[node name="StaticBody3D" type="StaticBody3D" parent="CompleteBasket"]
+script = ExtResource("14_xgchx")
 
-[node name="CabinetDoor4" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.005, 0, 0, 0, -0.005, 0, 0, 0, -0.005, 0.887893, 1.95044, 5.49141)
-mesh = ExtResource("11_5bp1a")
-surface_material_override/0 = SubResource("StandardMaterial3D_eg4oj")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CompleteBasket/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.577369, 2.18456, 0)
+shape = SubResource("BoxShape3D_frngk")
 
-[node name="CabinetDoor5" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.005, 0, 0, 0, -0.005, 0, 0, 0, -0.005, -0.22252, 1.95044, 5.49141)
-mesh = ExtResource("11_5bp1a")
-surface_material_override/0 = SubResource("StandardMaterial3D_eg4oj")
+[node name="Basket" type="MeshInstance3D" parent="CompleteBasket/StaticBody3D"]
+transform = Transform3D(-8.74228e-11, 0, -0.002, 0, 0.002, 0, 0.002, 0, -8.74228e-11, -0.303688, 2.06949, -0.415107)
+mesh = ExtResource("10_oxan5")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_j8a2g")
 
-[node name="PauseMenu" parent="." instance=ExtResource("15_yqpy7")]
+[node name="Label3D" type="Label3D" parent="CompleteBasket/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.577343, 2.6602, -0.410985)
+billboard = 1
+text = "Turn in
+"
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="Light" parent="Lights" instance=ExtResource("18_qytx1")]
+transform = Transform3D(-0.2, 0, 3.01992e-08, 0, 0.2, 0, -3.01992e-08, 0, -0.2, 0, 5.54549, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Lights/Light"]
+transform = Transform3D(-5, 4.09975e-07, -6.33967e-07, 0, 4.19857, 2.71514, 7.54979e-07, 2.71514, -4.19857, 3.2639e-07, -0.157108, 2.16158)
+light_energy = 5.495
+spot_range = 7.7649
+spot_attenuation = 1.1487
+spot_angle = 38.9238
+spot_angle_attenuation = 0.5
+
+[node name="Light2" parent="Lights" instance=ExtResource("18_qytx1")]
+transform = Transform3D(-0.2, 0, 3.01992e-08, -2.5201e-08, 0.110204, -0.166898, -1.66403e-08, -0.166898, -0.110204, 0, 5.54549, -0.0881619)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Lights/Light2"]
+transform = Transform3D(-5, 4.36001e-07, -6.16357e-07, -1.37599e-13, 4.08195, 2.88751, 7.54979e-07, 2.88751, -4.08195, 3.2639e-07, -0.157109, 2.16158)
+light_energy = 5.495
+spot_range = 6.04248
+spot_attenuation = 1.1487
+spot_angle = 29.8722
+spot_angle_attenuation = 0.5
+
+[node name="Building" type="Node3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Building"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Building/StaticBody3D"]
+shape = SubResource("BoxShape3D_2gfo8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Building/StaticBody3D"]
+mesh = SubResource("BoxMesh_iu2d0")
+
+[node name="Desk" parent="Building" instance=ExtResource("3_pq72w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.434, 0)
+
+[node name="Wall" parent="Building" instance=ExtResource("4_qaxyq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.539, 5.23692)
+
+[node name="Wall2" parent="Building" instance=ExtResource("4_qaxyq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.539, -7)
+
+[node name="Wall3" parent="Building" instance=ExtResource("4_qaxyq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.5, 3.539, 0)
+
+[node name="Wall4" parent="Building" instance=ExtResource("4_qaxyq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.5, 3.539, 0)
+
+[node name="Floor" parent="Building" instance=ExtResource("5_trtyj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.02375, 0)
+
+[node name="Counter" parent="Building" instance=ExtResource("6_2dxfj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -6)
+
+[node name="Cell 1" parent="Building" instance=ExtResource("7_0y8xj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -6)
+
+[node name="Cell 2" parent="Building" instance=ExtResource("8_etlrt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, -6)
+
+[node name="Cell 3" parent="Building" instance=ExtResource("9_8qmdj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5, -6)
 visible = false
 
 [connection signal="hide_form" from="Player" to="." method="_on_player_hide_form"]
