@@ -1,4 +1,5 @@
 extends StaticBody3D
+
 func returnMessage():
 	return "Jack"
 
