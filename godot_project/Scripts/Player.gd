@@ -28,7 +28,7 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if Input.is_action_just_pressed("mouse_left"):
 			print("Mouse 1")
-			if interact_item != null: interact_with_object()
+			if interact_item != null: _interact_with_object()
 		if Input.is_action_just_pressed("mouse_right"):
 			print("mouse 2")
 			if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
@@ -56,7 +56,7 @@ func _input(event):
 
 
 func _ready():
-	DialogueManager.dialogue_ended.connect(on_dialogue_ended)
+	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
@@ -72,10 +72,10 @@ func _movement():
 			velocity.z = move_toward(velocity.z, 0, SPEED)
 
 
-func interact_with_object():
+func _interact_with_object():
 	print(interact_item.name)
 	interact_item.interact_action()
 
 
-func on_dialogue_ended():
+func _on_dialogue_ended():
 	movement = true
