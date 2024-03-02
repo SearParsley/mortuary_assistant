@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cdlk7jf6l8j46"]
+[gd_scene load_steps=6 format=3 uid="uid://cdlk7jf6l8j46"]
 
 [ext_resource type="PackedScene" uid="uid://bvfq7ftw2pfnh" path="res://scenes/Test/Block.tscn" id="1_3jw74"]
+[ext_resource type="Script" path="res://scenes/Test/Block3.gd" id="2_0qa58"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ilaoj"]
 size = Vector3(8, 1, 1)
@@ -23,24 +24,25 @@ shape = SubResource("BoxShape3D_ilaoj")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00529003, 0.0177703, -0.00632858)
 mesh = SubResource("BoxMesh_p2hkj")
 
-[node name="Block" parent="." instance=ExtResource("1_3jw74")]
+[node name="Block 3" parent="." instance=ExtResource("1_3jw74")]
 transform = Transform3D(1.3, 0, 0, 0, 0.8, 0, 0, 0, 1, 0, 0, 0.104487)
+script = ExtResource("2_0qa58")
 
-[node name="Label3D" type="Label3D" parent="Block"]
+[node name="Label3D" type="Label3D" parent="Block 3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.51)
 text = "3
 "
 
-[node name="Block2" parent="." instance=ExtResource("1_3jw74")]
+[node name="Block 2" parent="." instance=ExtResource("1_3jw74")]
 transform = Transform3D(1.3, 0, 0, 0, 0.8, 0, 0, 0, 1, -2.3, 0, 0.104)
 
-[node name="Label3D" type="Label3D" parent="Block2"]
+[node name="Label3D" type="Label3D" parent="Block 2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.51)
 text = "2"
 
-[node name="Block3" parent="." instance=ExtResource("1_3jw74")]
+[node name="Block 1" parent="." instance=ExtResource("1_3jw74")]
 transform = Transform3D(1.3, 0, 0, 0, 0.8, 0, 0, 0, 1, 2.3, 0, 0.104)
 
-[node name="Label3D" type="Label3D" parent="Block3"]
+[node name="Label3D" type="Label3D" parent="Block 1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.51)
 text = "1"

@@ -1,0 +1,4 @@
+class_name Interactable
+extends Node3D
+var message = "Block 3"
+# Called when the node enters the scene tree for the first time.
