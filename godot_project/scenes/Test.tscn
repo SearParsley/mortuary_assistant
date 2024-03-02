@@ -1,14 +1,14 @@
 [gd_scene load_steps=13 format=3 uid="uid://c2doexm17v7om"]
 
-[ext_resource type="PackedScene" uid="uid://dfotl71sker8a" path="res://player.tscn" id="1_34mhq"]
-[ext_resource type="PackedScene" uid="uid://bvfq7ftw2pfnh" path="res://Block.tscn" id="2_qdjrx"]
-[ext_resource type="PackedScene" uid="uid://b0n5ijm8svvat" path="res://Desk.tscn" id="3_pq72w"]
-[ext_resource type="PackedScene" uid="uid://dtcamm7k3pu0g" path="res://Wall.tscn" id="4_qaxyq"]
-[ext_resource type="PackedScene" uid="uid://dr0y5h0dlri23" path="res://Floor.tscn" id="5_trtyj"]
-[ext_resource type="PackedScene" uid="uid://cj0lmvkuxqa3c" path="res://Counter.tscn" id="6_2dxfj"]
-[ext_resource type="PackedScene" uid="uid://cdlk7jf6l8j46" path="res://Cell1.tscn" id="7_0y8xj"]
-[ext_resource type="PackedScene" uid="uid://bf8ivy8xw7a52" path="res://Cell2.tscn" id="8_etlrt"]
-[ext_resource type="PackedScene" uid="uid://cbgyqd4p3asas" path="res://Cell3.tscn" id="9_8qmdj"]
+[ext_resource type="PackedScene" uid="uid://dfotl71sker8a" path="res://scenes/Test/player.tscn" id="1_34mhq"]
+[ext_resource type="PackedScene" uid="uid://bvfq7ftw2pfnh" path="res://scenes/Test/Block.tscn" id="2_qdjrx"]
+[ext_resource type="PackedScene" uid="uid://b0n5ijm8svvat" path="res://scenes/Test/Desk.tscn" id="3_pq72w"]
+[ext_resource type="PackedScene" uid="uid://dtcamm7k3pu0g" path="res://scenes/Test/Wall.tscn" id="4_qaxyq"]
+[ext_resource type="PackedScene" uid="uid://dr0y5h0dlri23" path="res://scenes/Test/Floor.tscn" id="5_trtyj"]
+[ext_resource type="PackedScene" uid="uid://cj0lmvkuxqa3c" path="res://scenes/Test/Counter.tscn" id="6_2dxfj"]
+[ext_resource type="PackedScene" uid="uid://cdlk7jf6l8j46" path="res://scenes/Test/Cell1.tscn" id="7_0y8xj"]
+[ext_resource type="PackedScene" uid="uid://bf8ivy8xw7a52" path="res://scenes/Test/Cell2.tscn" id="8_etlrt"]
+[ext_resource type="PackedScene" uid="uid://cbgyqd4p3asas" path="res://scenes/Test/Cell3.tscn" id="9_8qmdj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2gfo8"]
 size = Vector3(15, 2, 15)

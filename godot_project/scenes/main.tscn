@@ -1,8 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://sa4vhghey41u"]
+[gd_scene load_steps=13 format=3 uid="uid://sa4vhghey41u"]
 
-[ext_resource type="Texture2D" uid="uid://xprs21j7pk1f" path="res://icon.svg" id="1_6fhmx"]
-[ext_resource type="Script" path="res://scenes/main.gd" id="1_hnq6q"]
-[ext_resource type="Script" path="res://scenes/Form.gd" id="3_khyj6"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_hnq6q"]
+[ext_resource type="Script" path="res://Scripts/Form.gd" id="3_khyj6"]
 [ext_resource type="Theme" uid="uid://w7if2jyg2wqc" path="res://themes/base.tres" id="3_xyvm3"]
 [ext_resource type="Texture2D" uid="uid://2f4u4kpjmoko" path="res://assets/buttons/form_paper_2x.png" id="4_iqxdm"]
 
@@ -28,7 +27,6 @@ script = ExtResource("1_hnq6q")
 
 [node name="Floor" type="Sprite3D" parent="."]
 transform = Transform3D(5, 0, 0, 0, -2.18557e-07, 5, 0, -5, -2.18557e-07, 0, 0, 0)
-texture = ExtResource("1_6fhmx")
 
 [node name="Main Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
