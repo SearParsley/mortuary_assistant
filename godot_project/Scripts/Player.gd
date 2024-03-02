@@ -26,10 +26,11 @@ func _input(event):
 			$Head.rotate_x(-event.relative.y * camera_sens)
 			$Head.rotation.x = clampf($Head.rotation.x, -deg_to_rad(70),deg_to_rad(70))
 	if event is InputEventMouseButton:
-		if event.button_index == 1:
+		if Input.is_action_just_pressed("mouse_left"):
 			print("Mouse 1")
 			if interact_item != null: interact_with_object()
-		if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
+		if Input.is_action_just_pressed("mouse_right"):
+			print("mouse 2")
 			if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
 				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 				hide_form.emit()
