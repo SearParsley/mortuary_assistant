@@ -23,7 +23,46 @@ var paused = false
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		_pauseMenu()
-	
+
+
+func _pauseMenu():
+	if paused:
+		pause_menu.hide()
+		Engine.time_scale = 1
+	else:
+		pause_menu.show()
+		Engine.time_scale = 0
+	paused = !paused
+
+
+func _ready():
+	add_child(form)
+	update_stacks()
+
+
+func _on_player_hide_form():
+	form._hide_form()
+
+
+func _on_player_show_form():
+	form._show_form()
+
+
+func _on_static_body_3d_new_form():
+	form._new_form()
+
+
+func _on_static_body_3d_submit_form():
+	formsToFill -= 1
+	update_stacks()
+	form._submit_form()
+
+
+func _end_game():
+	get_tree().quit()
+
+
+func update_stacks():
 	if formsToFill == 9:
 		ToDoBasketFStack.show()
 		ToDoBasketHStack.hide()
@@ -56,35 +95,3 @@ func _process(_delta):
 		
 	if CoFull:
 		_end_game()
-	
-func _pauseMenu():
-	if paused:
-		pause_menu.hide()
-		Engine.time_scale = 1
-	else:
-		pause_menu.show()
-		Engine.time_scale = 0
-	paused = !paused
-
-
-func _ready():
-	add_child(form)
-
-
-func _on_player_hide_form():
-	form._hide_form()
-
-
-func _on_player_show_form():
-	form._show_form()
-
-
-func _on_static_body_3d_new_form():
-	form._new_form()
-
-
-func _on_static_body_3d_submit_form():
-	form._submit_form()
-
-func _end_game():
-	pass
