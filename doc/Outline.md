@@ -41,7 +41,3 @@ The main mechanic that the player will be using is typing. The player will type 
   * They will all have different attributes
   * And some will have different "tasks" for you
 
-
-
-
-

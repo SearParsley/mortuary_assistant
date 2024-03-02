@@ -3,10 +3,66 @@ extends Node3D
 @onready var form = preload("res://scenes/form.tscn").instantiate()
 
 @onready var pause_menu = $PauseMenu
+
+@onready var ToDoBasketFStack = $ToDoBaskst/Fullstack
+@onready var ToDoBasketHStack = $ToDoBaskst/Halfstack
+@onready var ToDoBasketLStack = $ToDoBaskst/Lowstack
+
+@onready var CoBasketFStack = $CompleteBasket/Fullstack
+@onready var CoBasketHStack = $CompleteBasket/Halfstack
+@onready var CoBasketLStack = $CompleteBasket/Lowstack
+
+
+
+var formsToFill = 9
+var currentForms = 0
+var CoFull = false
+
+
+
 var paused = false
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		_pauseMenu()
+		
+	if formsToFill == 9:
+		ToDoBasketFStack.show()
+		ToDoBasketHStack.hide()
+		ToDoBasketLStack.hide()
+	elif formsToFill >= 4 && formsToFill < 7:
+		ToDoBasketFStack.hide()
+		ToDoBasketHStack.show()
+		ToDoBasketLStack.hide()
+	elif formsToFill >= 1 && formsToFill < 4:
+		ToDoBasketFStack.hide()
+		ToDoBasketHStack.hide()
+		ToDoBasketLStack.show()
+	else:
+		ToDoBasketFStack.hide()
+		ToDoBasketHStack.hide()
+		ToDoBasketLStack.hide()
+		
+		
+	if formsToFill == 9:
+		ToDoBasketFStack.hide()
+		ToDoBasketHStack.hide()
+		ToDoBasketLStack.hide()
+	elif formsToFill >= 4 && formsToFill < 7:
+		ToDoBasketFStack.hide()
+		ToDoBasketHStack.hide()
+		ToDoBasketLStack.show()
+	elif formsToFill >= 1 && formsToFill < 4:
+		ToDoBasketFStack.hide()
+		ToDoBasketHStack.show()
+		ToDoBasketLStack.hide()
+	else:
+		ToDoBasketFStack.show()
+		ToDoBasketHStack.hide()
+		ToDoBasketLStack.hide()
+		CoFull = true
+	
+	
+	
 func _pauseMenu():
 	if paused:
 		pause_menu.hide()
