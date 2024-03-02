@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c2doexm17v7om"]
+[gd_scene load_steps=19 format=3 uid="uid://c2doexm17v7om"]
 
 [ext_resource type="PackedScene" uid="uid://dfotl71sker8a" path="res://scenes/Test/player.tscn" id="1_34mhq"]
 [ext_resource type="PackedScene" uid="uid://bvfq7ftw2pfnh" path="res://scenes/Test/Block.tscn" id="2_qdjrx"]
@@ -7,9 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://dr0y5h0dlri23" path="res://scenes/Test/Floor.tscn" id="5_trtyj"]
 [ext_resource type="PackedScene" uid="uid://cj0lmvkuxqa3c" path="res://scenes/Test/Counter.tscn" id="6_2dxfj"]
 [ext_resource type="PackedScene" uid="uid://cdlk7jf6l8j46" path="res://scenes/Test/Cell1.tscn" id="7_0y8xj"]
-[ext_resource type="PackedScene" uid="uid://bf8ivy8xw7a52" path="res://scenes/Test/Cell2.tscn" id="8_etlrt"]
-[ext_resource type="PackedScene" uid="uid://cbgyqd4p3asas" path="res://scenes/Test/Cell3.tscn" id="9_8qmdj"]
+[ext_resource type="PackedScene" uid="uid://cpbqkm16ypu7m" path="res://scenes/Test/Cell2.tscn" id="8_etlrt"]
+[ext_resource type="PackedScene" uid="uid://c5wqbjay4yftt" path="res://scenes/Test/Cell3.tscn" id="9_8qmdj"]
 [ext_resource type="ArrayMesh" uid="uid://p35a4e0jqqb8" path="res://assets/objects/Basket.obj" id="10_oxan5"]
+[ext_resource type="ArrayMesh" uid="uid://ci6rtli8rs8en" path="res://assets/objects/Cabinet Door.obj" id="11_5bp1a"]
+[ext_resource type="Texture2D" uid="uid://buwykim5hunw5" path="res://assets/Sprites/TestMetalSprite.png" id="11_pw8kl"]
+[ext_resource type="Texture2D" uid="uid://drkuf5ubj8msk" path="res://assets/Sprites/TestSprite.png" id="12_lqdek"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2gfo8"]
 size = Vector3(15, 2, 15)
@@ -20,6 +23,19 @@ albedo_color = Color(0.0941176, 0.172549, 0.172549, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_iu2d0"]
 material = SubResource("StandardMaterial3D_oudnk")
 size = Vector3(15, 2, 15)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j8a2g"]
+albedo_texture = ExtResource("11_pw8kl")
+uv1_scale = Vector3(-0.01, -0.01, -0.01)
+uv1_offset = Vector3(-2.565, -1.31, 5.135)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 0.590643
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eg4oj"]
+albedo_texture = ExtResource("12_lqdek")
+uv1_scale = Vector3(0.135, 0.135, 0.135)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 0.0063457
 
 [node name="World" type="Node3D"]
 
@@ -41,10 +57,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -2.74941)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.90669, 2, 2.1036)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.00424114, 0.999991, 0, -0.999991, -0.00424114, 0, 6.47433, 0)
+transform = Transform3D(1, 0, 0, 0, -0.00424114, 0.999991, 0, -0.999991, -0.00424114, 0, 5.684, 0)
 light_energy = 5.495
 spot_range = 21.8756
-spot_angle = 49.0706
+spot_attenuation = 1.1487
+spot_angle = 65.17
+spot_angle_attenuation = 0.5
 
 [node name="Block3" parent="." instance=ExtResource("3_pq72w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.434, 0)
@@ -88,3 +106,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5, -6)
 [node name="Basket" type="MeshInstance3D" parent="."]
 transform = Transform3D(-8.74228e-11, 0, -0.002, 0, 0.002, 0, 0.002, 0, -8.74228e-11, -0.303688, 2.06949, -0.415107)
 mesh = ExtResource("10_oxan5")
+surface_material_override/0 = SubResource("StandardMaterial3D_j8a2g")
+
+[node name="CabinetDoor" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.005, 0, 0, 0, -0.005, 0, 0, 0, -0.005, 4.3237, 1.95044, 5.49141)
+mesh = ExtResource("11_5bp1a")
+surface_material_override/0 = SubResource("StandardMaterial3D_eg4oj")
+
+[node name="CabinetDoor2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.005, 0, 0, 0, -0.005, 0, 0, 0, -0.005, 3.237, 1.95044, 5.49141)
+mesh = ExtResource("11_5bp1a")
+surface_material_override/0 = SubResource("StandardMaterial3D_eg4oj")
+
+[node name="CabinetDoor3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.005, 0, 0, 0, -0.005, 0, 0, 0, -0.005, 1.91273, 1.95044, 5.49141)
+mesh = ExtResource("11_5bp1a")
+surface_material_override/0 = SubResource("StandardMaterial3D_eg4oj")
+
+[node name="CabinetDoor4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.005, 0, 0, 0, -0.005, 0, 0, 0, -0.005, 0.887893, 1.95044, 5.49141)
+mesh = ExtResource("11_5bp1a")
+surface_material_override/0 = SubResource("StandardMaterial3D_eg4oj")
+
+[node name="CabinetDoor5" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.005, 0, 0, 0, -0.005, 0, 0, 0, -0.005, -0.22252, 1.95044, 5.49141)
+mesh = ExtResource("11_5bp1a")
+surface_material_override/0 = SubResource("StandardMaterial3D_eg4oj")

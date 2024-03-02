@@ -1,7 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cdlk7jf6l8j46"]
+[gd_scene load_steps=16 format=3 uid="uid://cdlk7jf6l8j46"]
 
-[ext_resource type="PackedScene" uid="uid://bvfq7ftw2pfnh" path="res://scenes/Test/Block.tscn" id="1_3jw74"]
-[ext_resource type="Script" path="res://scenes/Test/Block3.gd" id="2_0qa58"]
+[ext_resource type="Script" path="res://Scripts/Blocks/Block3.gd" id="1_t5t6v"]
+[ext_resource type="Script" path="res://Scripts/Blocks/Block 1.gd" id="2_o2se7"]
+[ext_resource type="Script" path="res://Scripts/Blocks/Block 2.gd" id="3_1jniq"]
+[ext_resource type="Texture2D" uid="uid://buwykim5hunw5" path="res://assets/Sprites/TestMetalSprite.png" id="4_y8vbv"]
+[ext_resource type="ArrayMesh" uid="uid://dq56wewwm84lt" path="res://assets/objects/Door.obj" id="5_mq4xa"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ilaoj"]
 size = Vector3(8, 1, 1)
@@ -12,6 +15,31 @@ albedo_color = Color(0.501961, 0.501961, 0.501961, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_p2hkj"]
 material = SubResource("StandardMaterial3D_y75ck")
 size = Vector3(8, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f6n5v"]
+size = Vector3(1.7, 1.7, 0.03)
+
+[sub_resource type="BoxMesh" id="BoxMesh_803w0"]
+size = Vector3(1.7, 1.7, 0.03)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0yms7"]
+albedo_texture = ExtResource("4_y8vbv")
+uv1_scale = Vector3(0.285, 0.285, 0.285)
+uv1_offset = Vector3(-7.17, 0, 0)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 0.0483219
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4a3dr"]
+size = Vector3(1.7, 1.7, 0.03)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nvu0t"]
+size = Vector3(1.7, 1.7, 0.03)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6yqwn"]
+size = Vector3(1.7, 1.7, 0.03)
+
+[sub_resource type="BoxMesh" id="BoxMesh_iwx5a"]
+size = Vector3(1.7, 1.7, 0.03)
 
 [node name="Cell 1" type="Node3D"]
 
@@ -24,25 +52,65 @@ shape = SubResource("BoxShape3D_ilaoj")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00529003, 0.0177703, -0.00632858)
 mesh = SubResource("BoxMesh_p2hkj")
 
-[node name="Block 3" parent="." instance=ExtResource("1_3jw74")]
-transform = Transform3D(1.3, 0, 0, 0, 0.8, 0, 0, 0, 1, 0, 0, 0.104487)
-script = ExtResource("2_0qa58")
+[node name="Block 3" type="StaticBody3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 0.5, 0, 0, 0, 0.6, 0, 0, 0.7)
+script = ExtResource("1_t5t6v")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Block 3"]
+shape = SubResource("BoxShape3D_f6n5v")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Block 3"]
+visible = false
+mesh = SubResource("BoxMesh_803w0")
 
 [node name="Label3D" type="Label3D" parent="Block 3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.51)
-text = "3
-"
+transform = Transform3D(1.78082, 0, 0, 0, 1.78174, 0, 0, 0, 1.77936, 0, 0, -0.0636274)
+text = "3"
 
-[node name="Block 2" parent="." instance=ExtResource("1_3jw74")]
-transform = Transform3D(1.3, 0, 0, 0, 0.8, 0, 0, 0, 1, -2.3, 0, 0.104)
+[node name="Door2" type="MeshInstance3D" parent="Block 3"]
+transform = Transform3D(0.00625, 0, 0, 0, -4.37114e-10, 0.01, 0, -0.00833333, -3.64262e-10, -0.75, -0.74, -0.0666666)
+material_overlay = SubResource("StandardMaterial3D_0yms7")
+mesh = ExtResource("5_mq4xa")
+skeleton = NodePath("../..")
 
-[node name="Label3D" type="Label3D" parent="Block 2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.51)
+[node name="Block 1" type="StaticBody3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 0.5, 0, 0, 0, 0.6, 2.303, 0, 0.706705)
+script = ExtResource("2_o2se7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Block 1"]
+shape = SubResource("BoxShape3D_4a3dr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Block 1"]
+visible = false
+mesh = SubResource("BoxMesh_nvu0t")
+
+[node name="Label3D3" type="Label3D" parent="Block 1"]
+transform = Transform3D(1.625, 0, 0, 0, 1.6, 0, 0, 0, 1.66667, -0.00387812, 0, -0.0666667)
+text = "1"
+
+[node name="Door1" type="MeshInstance3D" parent="Block 1"]
+transform = Transform3D(0.00625, 0, 0, 0, -4.37114e-10, 0.01, 0, -0.00833333, -3.64262e-10, -0.75375, -0.74, -0.0778408)
+material_overlay = SubResource("StandardMaterial3D_0yms7")
+mesh = ExtResource("5_mq4xa")
+skeleton = NodePath("../..")
+
+[node name="Block 2" type="StaticBody3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 0.5, 0, 0, 0, 0.6, -2.303, 0, 0.706284)
+script = ExtResource("3_1jniq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Block 2"]
+shape = SubResource("BoxShape3D_6yqwn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Block 2"]
+visible = false
+mesh = SubResource("BoxMesh_iwx5a")
+
+[node name="Label3D2" type="Label3D" parent="Block 2"]
+transform = Transform3D(1.625, 0, 0, 0, 1.6, 0, 0, 0, 1.66667, 0, 0, -0.0666667)
 text = "2"
 
-[node name="Block 1" parent="." instance=ExtResource("1_3jw74")]
-transform = Transform3D(1.3, 0, 0, 0, 0.8, 0, 0, 0, 1, 2.3, 0, 0.104)
-
-[node name="Label3D" type="Label3D" parent="Block 1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.51)
-text = "1"
+[node name="Door" type="MeshInstance3D" parent="Block 2"]
+transform = Transform3D(0.00625, 0, 0, 0, -4.37114e-10, 0.01, 0, -0.00833333, -3.64262e-10, -0.74625, -0.74, -0.0771403)
+material_overlay = SubResource("StandardMaterial3D_0yms7")
+mesh = ExtResource("5_mq4xa")
+skeleton = NodePath("../..")
