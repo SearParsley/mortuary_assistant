@@ -1,6 +1,5 @@
 extends Node
 
-@onready var form = preload("res://scenes/form.tscn").instantiate()
 @onready var ghosts = {
 	"jimmy": {
 		"dialogue_path": "res://dialogue/test.dialogue",
@@ -49,6 +48,7 @@ extends Node
 	},
 }
 
+var player_interact_item = Node
 
 func _ready():
 	load_dialogues()

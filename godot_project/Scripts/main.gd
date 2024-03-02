@@ -14,4 +14,3 @@ func _on_player_hide_form():
 func _on_player_show_form():
 	form.show_form()
 
-
