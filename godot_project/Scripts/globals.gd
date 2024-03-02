@@ -83,13 +83,15 @@ func load_dialogues():
 		ghosts[ghost]["dialogue_resource"] = load(dialogue_path)
 
 
-func run_dialogue(ghost: Dictionary):
+func _run_dialogue(ghost: Dictionary):
 	player.movement = false
 	DialogueManager.show_dialogue_balloon(ghost["dialogue_resource"], "")
 
 
 func load_sprites(): # TODO: load the sprites into the ghosts dict
-	pass
+	for ghost in ghosts.keys():
+		var sprite_path = ghosts[ghost]["sprite_path"]
+		ghosts[ghost]["sprite_node"] = get_node(sprite_path)
 
 
 

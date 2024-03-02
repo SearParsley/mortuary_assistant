@@ -10,7 +10,7 @@ extends Control
 var is_hidden = true
 
 func _ready():
-	hide_form()
+	_hide_form()
 	pass
 
 
@@ -30,15 +30,25 @@ func _on_kin_text_changed(new_text):
 	text_dict.kin = new_text
 
 
-func _on_submit_form_pressed():
-	hide_form()
+func _submit_form():
+	_hide_form()
+	text_dict = {
+		"name": "",
+		"cause": "",
+		"time": "",
+		"kin": ""
+		}
+	# TODO: increment one pile, decrement the other
+	
 
-func hide_form():
+func _hide_form():
 	for node in form_nodes:
 		node.hide()
 	is_hidden = true
+	
 
-func show_form():
+func _show_form():
 	for node in form_nodes:
 		node.show()
 	is_hidden = false
+	

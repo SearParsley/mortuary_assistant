@@ -23,9 +23,9 @@ func _ready():
 
 
 func _on_player_hide_form():
-	form.hide_form()
+	form._hide_form()
 
 
 func _on_player_show_form():
-	form.show_form()
+	form._show_form()
 
