@@ -1,9 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://sa4vhghey41u"]
+[gd_scene load_steps=12 format=3 uid="uid://chbw1jle1nmtm"]
 
-[ext_resource type="Script" path="res://Scripts/main.gd" id="1_hnq6q"]
-[ext_resource type="Script" path="res://Scripts/Form.gd" id="3_khyj6"]
-[ext_resource type="Theme" uid="uid://w7if2jyg2wqc" path="res://themes/base.tres" id="3_xyvm3"]
-[ext_resource type="Texture2D" uid="uid://2f4u4kpjmoko" path="res://assets/buttons/form_paper_2x.png" id="4_iqxdm"]
+[ext_resource type="Theme" uid="uid://w7if2jyg2wqc" path="res://themes/base.tres" id="1_xapws"]
+[ext_resource type="Script" path="res://Scripts/Form.gd" id="2_sxd4s"]
+[ext_resource type="Texture2D" uid="uid://2f4u4kpjmoko" path="res://assets/buttons/form_paper_2x.png" id="3_el1rb"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_432t0"]
 
@@ -21,11 +20,7 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ma8cn"]
 
-[node name="Node3D" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00307393, 0, 0)
-script = ExtResource("1_hnq6q")
-
-[node name="Form" type="Control" parent="."]
+[node name="Form" type="Control"]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -38,20 +33,20 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("3_xyvm3")
-script = ExtResource("3_khyj6")
+theme = ExtResource("1_xapws")
+script = ExtResource("2_sxd4s")
 
-[node name="FormSprite" type="Sprite2D" parent="Form" groups=["Form"]]
+[node name="FormSprite" type="Sprite2D" parent="." groups=["Form"]]
 position = Vector2(-36, 8)
-texture = ExtResource("4_iqxdm")
+texture = ExtResource("3_el1rb")
 
-[node name="Name" type="LineEdit" parent="Form" groups=["Form"]]
+[node name="Name" type="LineEdit" parent="." groups=["Form"]]
 layout_mode = 0
 offset_left = -52.0
 offset_top = -144.0
 offset_right = 84.0
 offset_bottom = -113.0
-theme = ExtResource("3_xyvm3")
+theme = ExtResource("1_xapws")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_432t0")
 theme_override_styles/read_only = SubResource("StyleBoxEmpty_snjo8")
@@ -65,13 +60,13 @@ deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 caret_blink = true
 
-[node name="Cause" type="LineEdit" parent="Form" groups=["Form"]]
+[node name="Cause" type="LineEdit" parent="." groups=["Form"]]
 layout_mode = 0
 offset_left = -44.0
 offset_top = -56.0
 offset_right = 84.0
 offset_bottom = -25.0
-theme = ExtResource("3_xyvm3")
+theme = ExtResource("1_xapws")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_hsl2r")
 theme_override_styles/read_only = SubResource("StyleBoxEmpty_pygo5")
@@ -85,13 +80,13 @@ deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 caret_blink = true
 
-[node name="Time" type="LineEdit" parent="Form" groups=["Form"]]
+[node name="Time" type="LineEdit" parent="." groups=["Form"]]
 layout_mode = 0
 offset_left = -60.0
 offset_top = 32.0
 offset_right = 84.0
 offset_bottom = 63.0
-theme = ExtResource("3_xyvm3")
+theme = ExtResource("1_xapws")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_8nqhm")
 theme_override_styles/read_only = SubResource("StyleBoxEmpty_hyt4l")
@@ -104,13 +99,13 @@ selecting_enabled = false
 deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 
-[node name="Kin" type="LineEdit" parent="Form" groups=["Form"]]
+[node name="Kin" type="LineEdit" parent="." groups=["Form"]]
 layout_mode = 0
 offset_left = -76.0
 offset_top = 128.0
 offset_right = 84.0
 offset_bottom = 159.0
-theme = ExtResource("3_xyvm3")
+theme = ExtResource("1_xapws")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_o7slq")
 theme_override_styles/read_only = SubResource("StyleBoxEmpty_ma8cn")
@@ -124,14 +119,14 @@ deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 caret_blink = true
 
-[node name="Submit_Form" type="Button" parent="Form" groups=["Form"]]
+[node name="Submit_Form" type="Button" parent="." groups=["Form"]]
 layout_mode = 0
 offset_left = 132.0
 offset_top = 112.0
 offset_right = 164.0
 offset_bottom = 144.0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Form" groups=["Form"]]
+[node name="RichTextLabel" type="RichTextLabel" parent="." groups=["Form"]]
 layout_mode = 0
 offset_left = 84.0
 offset_top = 144.0
@@ -140,8 +135,8 @@ offset_bottom = 184.0
 bbcode_enabled = true
 text = "[center]Submit[/center]"
 
-[connection signal="text_changed" from="Form/Name" to="Form" method="_on_name_text_changed"]
-[connection signal="text_changed" from="Form/Cause" to="Form" method="_on_cause_text_changed"]
-[connection signal="text_changed" from="Form/Time" to="Form" method="_on_time_text_changed"]
-[connection signal="text_changed" from="Form/Kin" to="Form" method="_on_kin_text_changed"]
-[connection signal="pressed" from="Form/Submit_Form" to="Form" method="_on_submit_form_pressed"]
+[connection signal="text_changed" from="Name" to="." method="_on_name_text_changed"]
+[connection signal="text_changed" from="Cause" to="." method="_on_cause_text_changed"]
+[connection signal="text_changed" from="Time" to="." method="_on_time_text_changed"]
+[connection signal="text_changed" from="Kin" to="." method="_on_kin_text_changed"]
+[connection signal="pressed" from="Submit_Form" to="." method="_on_submit_form_pressed"]
