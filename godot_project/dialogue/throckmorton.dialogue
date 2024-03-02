@@ -1,0 +1,27 @@
+~ talk_to_Throckmorton
+
+if Global.ghosts["throckmortom"]["has_met"]
+	Throckmorton: Fight the Power!
+	Throckmorton: The future is now, old man!
+	Throckmorton: Skaters, rejoice!
+else
+	Throckmorton: Sup, I'm Throckmorton, The best skater in the City!
+	do Global.ghosts["throckmorton"]["has_met"] = true
+	=> main_loop_Throckmorton
+
+~ main_loop_Throckmorton
+- How did you die?
+	Throckmorton: Well... I kind of burned a city councilwoman's house down after she banned skateboarding, but I caught on fire, too.
+	=> main_loop_Throckmorton
+- What was your job?
+	Throckmorton: Full time hero of the people and part time professional skater!
+	- So, you're unemployed?
+		Throckmorton: If you want to be a downer about it.
+	- Noted
+	=> main_loop_Throckmorton
+- Who is your closest Family member?
+	Throckmorton: It's me, myself, and I out there, brother.
+	=> main_loop_Throckmorton
+- Bye!
+	Throckmorton: Hang loose, Homie!
+	=> END

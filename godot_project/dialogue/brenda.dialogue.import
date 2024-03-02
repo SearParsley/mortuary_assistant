@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://yny0r5f2gb3s"
+path="res://.godot/imported/brenda.dialogue-98f7a55b821012d845b0799bed444a5d.tres"
+
+[deps]
+
+source_file="res://dialogue/brenda.dialogue"
+dest_files=["res://.godot/imported/brenda.dialogue-98f7a55b821012d845b0799bed444a5d.tres"]
+
+[params]
+
+defaults=true

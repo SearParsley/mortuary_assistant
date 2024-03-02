@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cxjxds120x762"
+path="res://.godot/imported/throckmorton.dialogue-d7701a8ee0d63c58a486d9a1fe7a5011.tres"
+
+[deps]
+
+source_file="res://dialogue/throckmorton.dialogue"
+dest_files=["res://.godot/imported/throckmorton.dialogue-d7701a8ee0d63c58a486d9a1fe7a5011.tres"]
+
+[params]
+
+defaults=true

@@ -1,7 +1,8 @@
 extends StaticBody3D
+
 func returnMessage():
-	return "Hough"
+	return "..."
 
 
 func interact_action():
-	Globals._run_dialogue("hough")
+	Globals._run_dialogue("kole")

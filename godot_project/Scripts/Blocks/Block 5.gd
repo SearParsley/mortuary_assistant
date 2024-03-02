@@ -1,6 +1,6 @@
 extends StaticBody3D
 func returnMessage():
-	return "Block 5"
+	return "Perl"
 
 
 func interact_action():

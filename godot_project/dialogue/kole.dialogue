@@ -1,0 +1,26 @@
+~ talk_to_Kole
+
+if Global.ghosts["kole"]["has_met"]
+	% Kole: I was so rich
+	% Kole: I made so much shareholder value
+	% Kole: Can I really not take my money with me?
+else
+	Kole: I'm Kole Burns! Do you need industry connections?
+	do Global.ghosts["kole"]["has_met"] = true
+=> main_loop_Kole
+
+~ main_loop_Kole
+
+- How did you die?
+	Kole: My house burned down last night!
+	=> main_loop_Kole
+- What was your job?
+	Kole: I was CEO of the most profitable oil company on the planet!
+	=> main_loop_Kole
+- Who is your closest family member?
+	Kole: My wife's brother Pete White.
+	=> main_loop_Kole
+- Bye!
+	Kole: I'll put in a good word for you.
+	wait(1)
+	=> END

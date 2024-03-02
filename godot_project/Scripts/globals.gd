@@ -5,55 +5,51 @@ extends Node
 		"dialogue_path": "res://dialogue/jimmy.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "../../res://assets/Sprites/ghosts/pink_ghost2x.png",
 	},
 	"hough": {
 		"dialogue_path": "res://dialogue/hough.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "res://assets/Sprites/ghosts/star_ghost2x.png",
 	},
 	"perl": {
 		"dialogue_path": "res://dialogue/perl.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "res://assets/Sprites/ghosts/green_ghost2x.png",
 	},
 	"beverly": {
 		"dialogue_path": "res://dialogue/beverly.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "res://assets/Sprites/ghosts/pokey_ghost2x.png",
 	},
 	"jack": {
 		"dialogue_path": "res://dialogue/jack.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "res://assets/Sprites/ghosts/star_ghost2x.png",
 	},
-	"ghost6": {
-		"dialogue_path": "res://dialogue/test5.dialogue",
+	"brenda": {
+		"dialogue_path": "res://dialogue/brenda.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "res://assets/Sprites/ghosts/star_ghost2x.png",
 	},
-	"ghost7": {
-		"dialogue_path": "res://dialogue/test5.dialogue",
+	"luke": {
+		"dialogue_path": "res://dialogue/luke.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "res://assets/Sprites/ghosts/star_ghost2x.png",
 	},
-	"ghost8": {
-		"dialogue_path": "res://dialogue/test5.dialogue",
+	"kole": {
+		"dialogue_path": "res://dialogue/kole.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "res://assets/Sprites/ghosts/star_ghost2x.png",
 	},
-	"ghost9": {
-		"dialogue_path": "res://dialogue/test5.dialogue",
+	"throckmorton": {
+		"dialogue_path": "res://dialogue/throckmorton.dialogue",
 		"dialogue_resource": "",
 		"has_met": false,
-		"sprite_path": "res://assets/Sprites/ghosts/star_ghost2x.png",
+	},
+	"justin": {
+		"dialogue_path": "res://dialogue/justin.dialogue",
+		"dialogue_resource": "",
+		"has_met": false,
 	},
 }
 
@@ -76,5 +72,4 @@ func load_dialogues():
 
 func _run_dialogue(ghost):
 	player.movement = false
-	_show_ghost.emit(ghosts[ghost]["sprite_path"])
 	DialogueManager.show_dialogue_balloon(ghosts[ghost]["dialogue_resource"], "")

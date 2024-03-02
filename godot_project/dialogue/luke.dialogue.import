@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://typ3t2gomo4c"
+path="res://.godot/imported/luke.dialogue-8042cb98bec4fe214a538be9aa9b63f9.tres"
+
+[deps]
+
+source_file="res://dialogue/luke.dialogue"
+dest_files=["res://.godot/imported/luke.dialogue-8042cb98bec4fe214a538be9aa9b63f9.tres"]
+
+[params]
+
+defaults=true

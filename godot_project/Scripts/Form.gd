@@ -31,6 +31,7 @@ func _submit_form():
 
 func _new_form():
 	for node in form_text_nodes:
-		node.text = "asd"
+		node.text = ""
+		in_hand = true
 	_hide_form()
 

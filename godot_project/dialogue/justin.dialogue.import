@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://clokhyhr64nbc"
+path="res://.godot/imported/justin.dialogue-0dfeb9dccf434183fcc159a1328f9cef.tres"
+
+[deps]
+
+source_file="res://dialogue/justin.dialogue"
+dest_files=["res://.godot/imported/justin.dialogue-0dfeb9dccf434183fcc159a1328f9cef.tres"]
+
+[params]
+
+defaults=true

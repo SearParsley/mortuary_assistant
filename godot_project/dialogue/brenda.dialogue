@@ -1,0 +1,25 @@
+~ talk_to_Brenda
+
+if Global.ghosts["brenda"]["has_met"]
+	% Brenda: Hello, my wonderful constituents!
+	% Brenda: Can you believe these youth and their skateboards?
+ 	% Brenda: I'm definitely going to win the election!
+else
+	Brenda: Hi! Are you new here? I'm Brenda Burns, but you can call me Bren.
+	do Global.ghosts["brenda"]["has_met"] = true
+=> main_loop_Brenda
+
+~ main_loop_Brenda
+- How did you die?
+	Brenda: My house burned down last night!
+	=> main_loop_Brenda
+- What was your job?
+	Brenda: I was Chairwoman of the City Council!
+	=> main_loop_Brenda
+- Who is your closest family member?
+	Brenda: My brother Pete White.
+	=> main_loop_Brenda
+- Bye!
+	Brenda: Don't forget to vote me for the Newly Dead Association president!
+	wait(1)
+	=> END
