@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://sa4vhghey41u"]
+[gd_scene load_steps=7 format=3 uid="uid://sa4vhghey41u"]
 
 [ext_resource type="Texture2D" uid="uid://xprs21j7pk1f" path="res://icon.svg" id="1_6fhmx"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_hnq6q"]
 [ext_resource type="Script" path="res://scenes/Form.gd" id="3_khyj6"]
+[ext_resource type="Script" path="res://text_input.gd" id="3_qui2c"]
 [ext_resource type="Theme" uid="uid://w7if2jyg2wqc" path="res://assets/themes/base.tres" id="3_xyvm3"]
 [ext_resource type="Texture2D" uid="uid://2f4u4kpjmoko" path="res://assets/buttons/form_paper_2x.png" id="4_iqxdm"]
 
@@ -35,14 +36,14 @@ grow_vertical = 2
 theme = ExtResource("3_xyvm3")
 script = ExtResource("3_khyj6")
 
-[node name="FormSprite" type="Sprite2D" parent="Form" groups=["Form"]]
+[node name="FormSprite" type="Sprite2D" parent="Form"]
 position = Vector2(-36, 8)
 texture = ExtResource("4_iqxdm")
 
-[node name="Name" type="LineEdit" parent="Form" groups=["Form"]]
+[node name="Name" type="LineEdit" parent="Form"]
 offset_left = -52.0
 offset_top = -144.0
-offset_right = 84.0
+offset_right = 15.0625
 offset_bottom = -113.0
 max_length = 14
 expand_to_text_length = true
@@ -53,11 +54,12 @@ selecting_enabled = false
 deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 flat = true
+script = ExtResource("3_qui2c")
 
-[node name="Cause" type="LineEdit" parent="Form" groups=["Form"]]
+[node name="Cause" type="LineEdit" parent="Form"]
 offset_left = -44.0
 offset_top = -56.0
-offset_right = 84.0
+offset_right = 23.0625
 offset_bottom = -25.0
 max_length = 12
 expand_to_text_length = true
@@ -68,11 +70,12 @@ selecting_enabled = false
 deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 flat = true
+script = ExtResource("3_qui2c")
 
-[node name="Time" type="LineEdit" parent="Form" groups=["Form"]]
+[node name="Time" type="LineEdit" parent="Form"]
 offset_left = -60.0
 offset_top = 32.0
-offset_right = 84.0
+offset_right = 7.0625
 offset_bottom = 63.0
 max_length = 10
 expand_to_text_length = true
@@ -83,11 +86,12 @@ selecting_enabled = false
 deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 flat = true
+script = ExtResource("3_qui2c")
 
-[node name="Kin" type="LineEdit" parent="Form" groups=["Form"]]
+[node name="Kin" type="LineEdit" parent="Form"]
 offset_left = -76.0
 offset_top = 128.0
-offset_right = 84.0
+offset_right = -8.9375
 offset_bottom = 159.0
 max_length = 14
 expand_to_text_length = true
@@ -98,26 +102,4 @@ selecting_enabled = false
 deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 flat = true
-
-[node name="Submit_Form" type="Button" parent="Form" groups=["Form"]]
-layout_mode = 0
-offset_left = 132.0
-offset_top = 112.0
-offset_right = 164.0
-offset_bottom = 144.0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Form" groups=["Form"]]
-layout_mode = 0
-offset_left = 84.0
-offset_top = 144.0
-offset_right = 212.0
-offset_bottom = 184.0
-bbcode_enabled = true
-text = "[center]Submit[/center]"
-
-[connection signal="text_changed" from="Form/Name" to="Form" method="_on_name_text_changed"]
-[connection signal="text_changed" from="Form/Cause" to="Form" method="_on_cause_text_changed"]
-[connection signal="text_changed" from="Form/Time" to="Form" method="_on_time_text_changed"]
-[connection signal="text_changed" from="Form/Kin" to="Form" method="_on_kin_text_changed"]
-[connection signal="pressed" from="Form/Submit_Form" to="Form" method="_on_button_pressed"]
-[connection signal="pressed" from="Form/Submit_Form" to="Form" method="_on_submit_form_pressed"]
+script = ExtResource("3_qui2c")

@@ -1,7 +1,44 @@
 extends Control
 
+@onready var form_nodes = get_tree().get_nodes_in_group("Form")
+@onready var text_dict = {
+	"name": "",
+	"cause": "",
+	"time": "",
+	"kin": ""
+	}
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	var font = $Form.get_font("string_name", "")
-	font.size = 8
+	#sprite.visible = false
+	pass
+
+
+func _on_name_text_changed(new_text):
+	text_dict.name = new_text
+
+
+func _on_cause_text_changed(new_text):
+	text_dict.cause = new_text
+
+
+func _on_time_text_changed(new_text):
+	text_dict.time = new_text
+
+
+func _on_kin_text_changed(new_text):
+	text_dict.kin = new_text
+
+
+func _on_submit_form_pressed():
+	hide_form()
+
+
+
+
+func hide_form():
+	for node in form_nodes:
+		node.hide()
+
+func show_form():
+	for node in form_nodes:
+		node.show()
