@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://tv45rekfw8mu"]
+
+[ext_resource type="Script" path="res://scenes/title_screen.gd" id="1_llio5"]
+[ext_resource type="Script" path="res://scenes/title_screen_container.gd" id="2_6y2y1"]
+[ext_resource type="Script" path="res://scenes/start_button.gd" id="3_frihg"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_llio5")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.5
+offset_top = -63.5
+offset_right = 232.5
+offset_bottom = 63.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_6y2y1")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer"]
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[center]Mortuary Madness[/center]"
+fit_content = true
+scroll_active = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="Button" type="Button" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "PLAY"
+script = ExtResource("3_frihg")
+
+[connection signal="pressed" from="GridContainer/Button" to="." method="_on_button_pressed"]

@@ -1,13 +1,13 @@
 [gd_scene load_steps=2 format=3 uid="uid://sa4vhghey41u"]
 
-[ext_resource type="Texture2D" uid="uid://xprs21j7pk1f" path="res://icon.svg" id="1_lhyy8"]
+[ext_resource type="Texture2D" uid="uid://xprs21j7pk1f" path="res://icon.svg" id="1_6fhmx"]
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00307393, 0, 0)
 
 [node name="Floor" type="Sprite3D" parent="."]
 transform = Transform3D(5, 0, 0, 0, -2.18557e-07, 5, 0, -5, -2.18557e-07, 0, 0, 0)
-texture = ExtResource("1_lhyy8")
+texture = ExtResource("1_6fhmx")
 
 [node name="Main Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
