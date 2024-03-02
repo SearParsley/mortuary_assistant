@@ -119,24 +119,7 @@ deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 caret_blink = true
 
-[node name="Submit_Form" type="Button" parent="." groups=["Form"]]
-layout_mode = 0
-offset_left = 132.0
-offset_top = 112.0
-offset_right = 164.0
-offset_bottom = 144.0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="." groups=["Form"]]
-layout_mode = 0
-offset_left = 84.0
-offset_top = 144.0
-offset_right = 212.0
-offset_bottom = 184.0
-bbcode_enabled = true
-text = "[center]Submit[/center]"
-
 [connection signal="text_changed" from="Name" to="." method="_on_name_text_changed"]
 [connection signal="text_changed" from="Cause" to="." method="_on_cause_text_changed"]
 [connection signal="text_changed" from="Time" to="." method="_on_time_text_changed"]
 [connection signal="text_changed" from="Kin" to="." method="_on_kin_text_changed"]
-[connection signal="pressed" from="Submit_Form" to="." method="_on_submit_form_pressed"]

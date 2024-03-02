@@ -7,6 +7,7 @@ extends Control
 	"time": "",
 	"kin": ""
 	}
+var is_hidden = true
 
 func _ready():
 	hide_form()
@@ -32,13 +33,12 @@ func _on_kin_text_changed(new_text):
 func _on_submit_form_pressed():
 	hide_form()
 
-
-
-
 func hide_form():
 	for node in form_nodes:
 		node.hide()
+	is_hidden = true
 
 func show_form():
 	for node in form_nodes:
 		node.show()
+	is_hidden = false

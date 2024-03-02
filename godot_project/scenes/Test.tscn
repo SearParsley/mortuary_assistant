@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://c2doexm17v7om"]
+[gd_scene load_steps=14 format=3 uid="uid://c2doexm17v7om"]
 
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_6w7ol"]
 [ext_resource type="PackedScene" uid="uid://dfotl71sker8a" path="res://scenes/Test/player.tscn" id="1_34mhq"]
 [ext_resource type="PackedScene" uid="uid://bvfq7ftw2pfnh" path="res://scenes/Test/Block.tscn" id="2_qdjrx"]
 [ext_resource type="PackedScene" uid="uid://b0n5ijm8svvat" path="res://scenes/Test/Desk.tscn" id="3_pq72w"]
@@ -21,6 +22,7 @@ material = SubResource("StandardMaterial3D_oudnk")
 size = Vector3(15, 2, 15)
 
 [node name="World" type="Node3D"]
+script = ExtResource("1_6w7ol")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -83,3 +85,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, -6)
 
 [node name="Cell 3" parent="." instance=ExtResource("9_8qmdj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5, -6)
+
+[connection signal="hide_form" from="Player" to="." method="_on_player_hide_form"]
+[connection signal="show_form" from="Player" to="." method="_on_player_show_form"]
