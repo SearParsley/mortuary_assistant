@@ -2,7 +2,7 @@ extends Node
 
 @onready var ghosts = {
 	"jimmy": {
-		"dialogue_path": "res://dialogue/test.dialogue",
+		"dialogue_path": "res://dialogue/influencer_test.dialogue",
 		"dialogue_resource": "",
 		"has_met": false
 	},
@@ -47,6 +47,8 @@ extends Node
 		"has_met": false
 	},
 }
+
+@onready var player = get_node("res://scenes/Test/player")
 
 var player_interact_item = Node
 

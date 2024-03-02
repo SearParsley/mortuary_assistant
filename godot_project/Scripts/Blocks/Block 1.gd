@@ -4,4 +4,6 @@ func returnMessage():
 
 
 func interact_action():
-	pass
+	# Globals.player.freeze()
+	var resource = Globals.ghosts["jimmy"]["dialogue_resource"]
+	DialogueManager.show_dialogue_balloon(resource, "")

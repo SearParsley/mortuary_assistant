@@ -72,4 +72,3 @@ func interact_with_object():
 	print(interact_item.name)
 	interact_item.interact_action()
 
-
