@@ -1,7 +1,7 @@
 extends Node3D
 
 @onready var form = preload("res://scenes/form.tscn").instantiate()
-
+@onready var player = $Player
 @onready var pause_menu = $PauseMenu
 
 @onready var ToDoBasketFStack = $ToDoBaskst/Fullstack
@@ -15,7 +15,6 @@ extends Node3D
 
 
 var formsToFill = 9
-var currentForms = 0
 var CoFull = false
 
 
@@ -24,44 +23,39 @@ var paused = false
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		_pauseMenu()
-		
+	
 	if formsToFill == 9:
 		ToDoBasketFStack.show()
 		ToDoBasketHStack.hide()
 		ToDoBasketLStack.hide()
-	elif formsToFill >= 4 && formsToFill < 7:
+		CoBasketFStack.hide()
+		CoBasketHStack.hide()
+		CoBasketLStack.hide()
+	if formsToFill >= 4 && formsToFill < 7:
 		ToDoBasketFStack.hide()
 		ToDoBasketHStack.show()
 		ToDoBasketLStack.hide()
-	elif formsToFill >= 1 && formsToFill < 4:
+		CoBasketFStack.hide()
+		CoBasketHStack.hide()
+		CoBasketLStack.show()
+	if formsToFill >= 1 && formsToFill < 4:
 		ToDoBasketFStack.hide()
 		ToDoBasketHStack.hide()
 		ToDoBasketLStack.show()
-	else:
+		CoBasketFStack.hide()
+		CoBasketHStack.show()
+		CoBasketLStack.hide()
+	if formsToFill == 0:
 		ToDoBasketFStack.hide()
 		ToDoBasketHStack.hide()
 		ToDoBasketLStack.hide()
-		
-		
-	if formsToFill == 9:
-		ToDoBasketFStack.hide()
-		ToDoBasketHStack.hide()
-		ToDoBasketLStack.hide()
-	elif formsToFill >= 4 && formsToFill < 7:
-		ToDoBasketFStack.hide()
-		ToDoBasketHStack.hide()
-		ToDoBasketLStack.show()
-	elif formsToFill >= 1 && formsToFill < 4:
-		ToDoBasketFStack.hide()
-		ToDoBasketHStack.show()
-		ToDoBasketLStack.hide()
-	else:
-		ToDoBasketFStack.show()
-		ToDoBasketHStack.hide()
-		ToDoBasketLStack.hide()
+		CoBasketFStack.show()
+		CoBasketHStack.hide()
+		CoBasketLStack.hide()
 		CoFull = true
-	
-	
+		
+	if CoFull:
+		_end_game()
 	
 func _pauseMenu():
 	if paused:
@@ -92,3 +86,5 @@ func _on_static_body_3d_new_form():
 func _on_static_body_3d_submit_form():
 	form._submit_form()
 
+func _end_game():
+	pass
