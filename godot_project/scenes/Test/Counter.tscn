@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cj0lmvkuxqa3c"]
+[gd_scene load_steps=5 format=3 uid="uid://cj0lmvkuxqa3c"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ilaoj"]
 size = Vector3(10, 1, 1)
@@ -10,6 +10,18 @@ albedo_color = Color(0.501961, 0.501961, 0.501961, 1)
 material = SubResource("StandardMaterial3D_y75ck")
 size = Vector3(10, 1, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1p2hr"]
+albedo_color = Color(0.505882, 0.505882, 0.505882, 1)
+metallic = 0.67
+metallic_specular = 0.0
+roughness = 0.48
+clearcoat_enabled = true
+clearcoat = 0.83
+clearcoat_roughness = 0.51
+uv1_scale = Vector3(1.54, 1.54, 1.54)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 0.482969
+
 [node name="Block" type="Node3D"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
@@ -20,3 +32,4 @@ shape = SubResource("BoxShape3D_ilaoj")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00529003, 0.0177703, -0.00632858)
 mesh = SubResource("BoxMesh_p2hkj")
+surface_material_override/0 = SubResource("StandardMaterial3D_1p2hr")

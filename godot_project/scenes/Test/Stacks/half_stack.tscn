@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfn3i422kt3rm"]
+
+[ext_resource type="PackedScene" uid="uid://bvfq7ftw2pfnh" path="res://scenes/Test/Block.tscn" id="1_q3v1j"]
+
+[node name="Half stack" type="Node3D"]
+
+[node name="Block" parent="." instance=ExtResource("1_q3v1j")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Block2" parent="." instance=ExtResource("1_q3v1j")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.0184429, 0)
+
+[node name="Block3" parent="." instance=ExtResource("1_q3v1j")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.0356494, 0)
+
+[node name="Block5" parent="." instance=ExtResource("1_q3v1j")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.0675913, 0)
+
+[node name="Block6" parent="." instance=ExtResource("1_q3v1j")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.0860342, 0)
+
+[node name="Block7" parent="." instance=ExtResource("1_q3v1j")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.103241, 0)
+
+[node name="Block8" parent="." instance=ExtResource("1_q3v1j")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.117013, 0)
+
+[node name="Block9" parent="." instance=ExtResource("1_q3v1j")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.135455, 0)
+
+[node name="Block10" parent="." instance=ExtResource("1_q3v1j")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.152662, 0)
+
+[node name="Block4" parent="." instance=ExtResource("1_q3v1j")]
+transform = Transform3D(0.617132, 0, -0.201078, 0, -0.015, 0, 0.126679, 0, 0.979575, 0, 0.0572621, 0)
+
+[node name="Block11" parent="." instance=ExtResource("1_q3v1j")]
+transform = Transform3D(0.617132, 0, 0.201078, 0, -0.015, 0, -0.126679, 0, 0.979575, 0, 0.165248, 0)
+
+[node name="Block12" parent="." instance=ExtResource("1_q3v1j")]
+transform = Transform3D(0.63, 0, 0, 0, -0.015, 0, 0, 0, 1, 0, 0.182207, 0)

@@ -18,3 +18,7 @@ func _process(_delta):
 		if detected.has_method("returnMessage"):
 			prompt.text = detected.returnMessage()
 			player.interact_item = detected
+		elif detected.has_method("getNewForm"):
+			prompt.text = "Pick up new form"
+		elif detected.has_method("submitForm"):
+			prompt.text = "Place form"
