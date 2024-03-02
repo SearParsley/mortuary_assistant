@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://tv45rekfw8mu"]
+
+[ext_resource type="Texture2D" uid="uid://xprs21j7pk1f" path="res://icon.svg" id="1_ius02"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 48.0
+offset_top = 216.0
+offset_right = 176.0
+offset_bottom = 344.0
+texture = ExtResource("1_ius02")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 48.0
+offset_top = 368.0
+offset_right = 176.0
+offset_bottom = 496.0
+texture = ExtResource("1_ius02")
