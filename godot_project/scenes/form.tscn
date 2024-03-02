@@ -37,14 +37,14 @@ theme = ExtResource("1_xapws")
 script = ExtResource("2_sxd4s")
 
 [node name="FormSprite" type="Sprite2D" parent="." groups=["Form"]]
-position = Vector2(-36, 8)
+position = Vector2(20, 8)
 texture = ExtResource("3_el1rb")
 
 [node name="Name" type="LineEdit" parent="." groups=["Form"]]
 layout_mode = 0
-offset_left = -52.0
+offset_left = 4.0
 offset_top = -144.0
-offset_right = 84.0
+offset_right = 140.0
 offset_bottom = -113.0
 theme = ExtResource("1_xapws")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -62,9 +62,9 @@ caret_blink = true
 
 [node name="Cause" type="LineEdit" parent="." groups=["Form"]]
 layout_mode = 0
-offset_left = -44.0
+offset_left = 12.0
 offset_top = -56.0
-offset_right = 84.0
+offset_right = 140.0
 offset_bottom = -25.0
 theme = ExtResource("1_xapws")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -82,9 +82,9 @@ caret_blink = true
 
 [node name="Time" type="LineEdit" parent="." groups=["Form"]]
 layout_mode = 0
-offset_left = -60.0
+offset_left = -4.0
 offset_top = 32.0
-offset_right = 84.0
+offset_right = 140.0
 offset_bottom = 63.0
 theme = ExtResource("1_xapws")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -101,9 +101,9 @@ drag_and_drop_selection_enabled = false
 
 [node name="Kin" type="LineEdit" parent="." groups=["Form"]]
 layout_mode = 0
-offset_left = -76.0
+offset_left = -20.0
 offset_top = 128.0
-offset_right = 84.0
+offset_right = 140.0
 offset_bottom = 159.0
 theme = ExtResource("1_xapws")
 theme_override_colors/font_color = Color(0, 0, 0, 1)

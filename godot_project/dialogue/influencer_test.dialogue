@@ -1,0 +1,28 @@
+~ talk_to_Jimmy
+if Globals.ghosts["jimmy"]["has_met"] == false
+	Jimmy: Hi! I’m Jimmy Paul, an influencer. I bet you knew that, though.
+	- why would I?
+		Jimmy: Because I went viral, of course!
+	- I do!
+		Jimmy: I love meeting fans!
+	do Globals.ghosts["jimmy"]["has_met"] = true
+else
+	% Jimmy: Heyyy! Have you followed my page yet?
+	% Not to brag, but I have 50 followers
+	% If only I could stream this right now
+	# wait(1)
+
+~ main_loop_jimmy
+- How did you die?
+	Jimmy: I did it for the vine, brother. It was awesome, If only I could have uploaded it…
+	=> main_loop_jimmy
+- How long have you been here?
+	Jimmy: Longer than any of these suckers! [next=0.6]
+		In fact, this is practically my own Mansion!
+	=> main_loop_jimmy
+- Who is your closest family?
+	Jimmy: My followers are my family!
+	=> main_loop_jimmy
+- Bye!
+	Jimmy: Don’t forget to watch for uploads!
+	=> END

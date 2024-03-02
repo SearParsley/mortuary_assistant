@@ -6,7 +6,6 @@ const JUMP_VELOCITY = 4.5
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var look_dir : Vector2
 @onready var ray = $Head/RayCast3D
-@onready var form = get_node("../Form")
 var camera_sens = 0.002
 var pauseBool = false
 var capMouse = false
@@ -36,6 +35,9 @@ func _input(event):
 				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			else:
 				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+				
+				# I think the esc. key should just exit the game tbh
+				
 				#
 				#
 				# Put code for pause menu (if were doing it)
