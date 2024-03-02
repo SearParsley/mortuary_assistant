@@ -3,7 +3,7 @@
 if Globals.ghosts["perl"]["has_met"]
 	Perl: What can I do for you?
 else
-	[[Hi\,|Hello!]] I'm Perl.
+	[[Hi,|Hello!]] I'm Perl.
 	do Globals.ghosts["perl"]["has_met"] = true
 => main_loop_Perl
 

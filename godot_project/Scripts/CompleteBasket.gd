@@ -1,4 +1,9 @@
 extends StaticBody3D
 
-func submitForm():
-	pass
+signal submit_form
+
+func returnMessage():
+	return "Place Form"
+
+func interact_action():
+	submit_form.emit()

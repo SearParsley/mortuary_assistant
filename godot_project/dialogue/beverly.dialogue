@@ -4,7 +4,7 @@ if Globals.ghosts["beverly"]["has_met"]
 	% Beverly: Did you come to chat about animals?
 	% Beverly: What's up?
 else
-	Beverly: [[Hi\,|Heyy!|Hello!|What's up?]] I'm Beverly Buck!
+	Beverly: [[Hi,|Heyy!|Hello!|What's up?]] I'm Beverly Buck!
 	do Globals.ghosts["beverly"]["has_met"] = true
 => main_loop_Beverly
 
