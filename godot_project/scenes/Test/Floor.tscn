@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dr0y5h0dlri23"]
+[gd_scene load_steps=5 format=3 uid="uid://dr0y5h0dlri23"]
+
+[ext_resource type="Script" path="res://Scripts/floor.gd" id="1_nwias"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ilaoj"]
 size = Vector3(15, 2, 15)
@@ -13,6 +15,7 @@ size = Vector3(15, 2, 15)
 [node name="Block" type="Node3D"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+script = ExtResource("1_nwias")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("BoxShape3D_ilaoj")

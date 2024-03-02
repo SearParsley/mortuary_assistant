@@ -1,7 +1,7 @@
 extends Control
 
 @onready var form_nodes = get_tree().get_nodes_in_group("Form")
-@onready var text_fields = [$Name, $Cause, $Time, $Kin]
+@onready var form_text_nodes = get_tree().get_nodes_in_group("Form_Text")
 
 var is_hidden = true
 var in_hand = false
@@ -30,7 +30,8 @@ func _submit_form():
 
 
 func _new_form():
-	for node in text_fields:
-		node.text = "asd"
+	for node in form_text_nodes:
+		node.text = ""
+		in_hand = true
 	_hide_form()
 

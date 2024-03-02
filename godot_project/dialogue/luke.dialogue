@@ -1,0 +1,23 @@
+~ talk_to_Luke
+
+if Globals.ghosts["luke"]["has_met"]
+	Luke: Want to chat?
+else
+	[[Hi\,|Hello!]] I'm Luke Ough!
+	do Globals.ghosts["luke"]["has_met"] = true
+=> main_loop_Luke
+
+~ main_loop_Luke
+
+- How did you die?
+	Luke: I was skydiving, and whatever slacker packed my parachute didn't attatch it to the bag!  
+	=> main_loop_Luke
+- What was your job?
+	Luke: I was the best skydiving instructor you'll ever meet!
+	=> main_loop_Luke
+- Who is your closest family member?
+	Luke: My son Justin!
+	=> main_loop_Luke
+- Bye!
+	Luke:  See you later!
+	=> END

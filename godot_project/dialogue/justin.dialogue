@@ -1,0 +1,27 @@
+~ talk_to_justin
+if Globals.ghosts["justin"]["has_met"]
+	Justin: what do you want now?
+else
+	Justin: Yes?
+	wait(7)
+	Uhhh, what's your name?
+	Justin:Justin.
+	wait(3)
+	do Globals.ghosts["justin"]["has_met"] = true	
+=> main_loop_Justin
+
+~ main_loop_Justin
+
+- How did you die?
+	Justin: I was just walking down the street when my Dad fell from the sky and crushed me!
+	=> main_loop_Justin
+- What was your job?
+	Justin: I packed parachutes. BORING!
+	=> main_loop_Justin
+- Who is your closest family member?
+	Justin: My wife, Kelly.
+	=> main_loop_Justin
+- Bye!
+	Justin: See you later!
+	wait(1)
+	=> END
