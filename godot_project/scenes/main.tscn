@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://sa4vhghey41u"]
+[gd_scene load_steps=5 format=3 uid="uid://sa4vhghey41u"]
 
 [ext_resource type="Texture2D" uid="uid://xprs21j7pk1f" path="res://icon.svg" id="1_6fhmx"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_hnq6q"]
 [ext_resource type="Script" path="res://text_input.gd" id="3_qui2c"]
+[ext_resource type="Texture2D" uid="uid://tsa1wr2staqn" path="res://assets/buttons/form_paper.png" id="4_n2bi0"]
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00307393, 0, 0)
@@ -21,3 +22,7 @@ offset_right = 67.0625
 offset_bottom = 31.0
 max_length = 20
 script = ExtResource("3_qui2c")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 1.17844, -3)
+texture = ExtResource("4_n2bi0")
