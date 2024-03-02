@@ -37,7 +37,7 @@ theme = ExtResource("1_xapws")
 script = ExtResource("2_sxd4s")
 
 [node name="FormSprite" type="Sprite2D" parent="." groups=["Form"]]
-position = Vector2(20, 8)
+position = Vector2(-36, 8)
 texture = ExtResource("3_el1rb")
 
 [node name="Name" type="LineEdit" parent="." groups=["Form"]]
